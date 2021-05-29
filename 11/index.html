@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>1-11 ECサイト</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+<meta name="robots" content="noindex,nofollow"><meta name="keywords"  content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--=============Google Font ===============-->
+<link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<!--機能編 9-3-1 ツールチップ-->
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/tippy.js@5.0.3/animations/shift-toward-subtle.css">
+<!--機能編 6-2-4　サムネイルをクリックすると、メイン画像が切り替わる1-->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<!--機能編 9-6-1　ページを開くと、背景が暗くなりテキストを表示-->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+<!--自作のCSS-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/parts.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+<body>
+<header id="header" class="fadeDownTrigger">
+<h1 class="rotateY"><a href="#"><img src="img/logo.png" alt="Green Market"></a></h1>
+
+<a href="#info" class="modal-open"></a>
+
+<div id="search-wrap" class="fadeUpTrigger">
+<form role="search" method="get" action="">
+<input type="text" value="" name="" id="search-text">
+</form>
+<!--/search-wrap--></div>
+</header>
+   
+<div class="openbtn fadeDownTrigger"><span></span><span></span><span></span></div>
+<nav id="g-nav" class="fadeUpTrigger">
+<div id="g-nav-list">
+<p><a href="#"><img src="img/logow.png" alt="Green Market"></a></p>
+<ul>
+<li><a href="#">花束・ブーケ</a></li>	
+<li class="has-child"><a href="#">アレンジメント</a>
+    <ul>
+        <li><a href="#"><dl>
+            <dt><img src="img/main01.jpg" alt=""></dt>
+            <dd>JOY</dd>
+            </dl></a></li>
+        <li><a href="#"><dl>
+            <dt><img src="img/main02.jpg" alt=""></dt>
+            <dd>FUN</dd>
+            </dl></a></li>
+        <li><a href="#"><dl>
+            <dt><img src="img/main03.jpg" alt=""></dt>
+            <dd>RELAX</dd>
+            </dl></a></li>
+        <li><a href="#"><dl>
+            <dt><img src="img/main04.jpg" alt=""></dt>
+            <dd>HEART</dd>
+            </dl></a></li>
+        <li><a href="#"><dl>
+            <dt><img src="img/main05.jpg" alt=""></dt>
+            <dd>HAPPY</dd>
+            </dl></a></li>
+    </ul>
+</li>
+<li><a href="#">プリザーブドフラワー</a></li>	
+<li class="has-child"><a href="#">季節限定</a>
+  <ul>
+            <li><a href="#"><dl>
+                <dt><img src="img/new01.jpg" alt=""></dt>
+                <dd>クリスマス</dd>
+                </dl></a></li>
+            <li><a href="#"><dl>
+                <dt><img src="img/new02.jpg" alt=""></dt>
+                <dd>お正月</dd>
+                </dl></a></li>
+            <li><a href="#"><dl>
+                <dt><img src="img/new03.jpg" alt=""></dt>
+                <dd>母の日</dd>
+                </dl></a></li>
+            <li><a href="#"><dl>
+                <dt><img src="img/new04.jpg" alt=""></dt>
+                <dd>お歳暮</dd>
+                </dl></a></li>
+    </ul>     
+</li>	
+</ul>
+</div>
+</nav>
+<div class="circle-bg"></div>
+   
+<ul class="slider fadeUpTrigger">
+	<li><a href="#"><img src="img/main01.jpg" alt=""><span class="detail-price">Bouquet &yen;2,400</span></a></li>
+	<li><a href="#"><img src="img/main02.jpg" alt=""><span class="detail-price">Bouquet &yen;2,400</span></a></li>
+	<li><a href="#"><img src="img/main03.jpg" alt=""><span class="detail-price">Bouquet &yen;2,400</span></a></li>
+	<li><a href="#"><img src="img/main04.jpg" alt=""><span class="detail-price">Bouquet &yen;2,400</span></a></li>
+	<li><a href="#"><img src="img/main05.jpg" alt=""><span class="detail-price">Bouquet &yen;2,400</span></a></li>
+<!--/slider--></ul>
+    
+<div id="wrapper">
+<main id="main-area">
+    
+<section id="ranking" class="fadeUpTrigger">
+<h2><span>Ranking</span></h2>
+<ol class="ranking-list delayScroll">
+<li class="shine"><a href="#"><span class="mask"><img src="img/ranking01.jpg" alt=""></span><span class="ranking-cap">Bouquet<br>&yen;2,500</span></a></li>
+<li class="shine"><a href="#"><span class="mask"><img src="img/ranking02.jpg" alt=""></span><span class="ranking-cap">Arrangement<br>&yen;3,500</span></a></li>
+<li class="shine"><a href="#"><span class="mask"><img src="img/ranking03.jpg" alt=""></span><span class="ranking-cap">Bouquet<br>&yen;1,500</span></a></li>
+<li><a href="#"><img src="img/ranking04.jpg" alt=""><span class="ranking-cap">Bouquet<br>&yen;2,000</span></a></li>
+<li><a href="#"><img src="img/ranking05.jpg" alt=""><span class="ranking-cap">Bouquet<br>&yen;3,500</span></a></li>
+<li><a href="#"><img src="img/ranking06.jpg" alt=""><span class="ranking-cap">Arrangement<br>&yen;3,500</span></a></li>
+<li><a href="#"><img src="img/ranking07.jpg" alt=""><span class="ranking-cap">Arrangement<br>&yen;2,500</span></a></li>
+<li><a href="#"><img src="img/ranking08.jpg" alt=""><span class="ranking-cap">Bouquet<br>&yen;1,500</span></a></li>
+<li><a href="#"><img src="img/ranking09.jpg" alt=""><span class="ranking-cap">Bouquet<br>&yen;3,500</span></a></li>
+</ol>
+<!--/ranking--></section>
+ 
+<section id="newitems" class="fadeUpTrigger">
+<h2><span>New Items</span></h2>
+<ul class="gallery">
+		<li><a href="#"><img src="img/new01.jpg" alt=""><span class="detail-price">Bouquet &yen;5,400</span></a></li>
+		<li><a href="#"><img src="img/new02.jpg" alt=""><span class="detail-price">Bouquet &yen;2,500</span></a></li>
+		<li><a href="#"><img src="img/new03.jpg" alt=""><span class="detail-price">Bouquet &yen;1,500</span></a></li>
+		<li><a href="#"><img src="img/new04.jpg" alt=""><span class="detail-price">Bouquet &yen;2,400</span></a></li>
+	</ul>
+	<ul class="choice-btn">
+		<li class="flipY"><img src="img/new_s_01.jpg" alt=""><span class="detail-cap">Bouquet<br>&yen;5,400</span></li>
+		<li class="flipY"><img src="img/new_s_02.jpg" alt=""><span class="detail-cap">Bouquet<br>&yen;2,500</span></li>
+		<li class="flipY"><img src="img/new_s_03.jpg" alt=""><span class="detail-cap">Bouquet<br>&yen;1,500</span></li>
+		<li class="flipY"><img src="img/new_s_04.jpg" alt=""><span class="detail-cap">Bouquet<br>&yen;2,400</span></li>
+     </ul>
+</section>
+
+<article id="news" class="fadeUpTrigger">
+    <h2>News</h2>
+<section id="info">
+		<h2><span>Sale情報</span></h2>
+    <p><img src="img/main02.jpg" alt=""></p>
+		<p>来月の母の日に向けて、<br>期間限定のブーケを多数ご用意したフェアを開催中です！<br>通常より価格も20%OFFになっています！<br>この機会をお見逃しなく！</p>
+</section>
+<ul class="accordion-area">
+		<li>
+			<section>
+				<h3 class="title">2021/04/05　母の日フェア開催</h3>
+				<div class="box">
+					<p>来月の母の日に向けて期間限定のブーケを多数ご用意したフェアを開催中です！</p>
+				</div>
+			</section>
+		</li>
+		<li>
+			<section>
+				<h3 class="title">2021/02/05　商品入れ替えのため期間限定20%OFF</h3>
+				<div class="box">
+					<p>GREENSHOPの商品入れ替えのため、2月5日から3月5日までの1か月間、全商品を20%OFFでご提供いたします！<br>この機会をお見逃しなく！</p>
+				</div>
+			</section>
+		</li>
+		<li>
+			<section>
+				<h3 class="title">2021/01/01　新春キャンペーン実施！</h3>
+				<div class="box">
+					<p>新しい年にお花を。新年にピッタリなお花を多数ご用意しました。</p>
+				</div>
+			</section>
+			
+		</li>
+	</ul>
+</article>
+</main>
+<aside id="sub-area">
+    <div class="sub-fix-block">
+    <ul class="sub-btn-list fadeUpTrigger">
+        <li class="cap" data-tippy-content="<div class='inner-cap'><p>会員限定初回10% OFF！</p></div>"><a href="#" class="pushcircle"><img src="img/icon_key.svg" alt=""><br>Login</a></li>
+        <li class="cap" data-tippy-content="<div class='inner-cap'><p>カート内3点</p></div>"><a href="#" class="pushcircle"><img src="img/icon_cart.svg" alt=""><br>Cart</a></li>
+    </ul>
+    
+<div class="tab-area fadeUpTrigger">
+<ul class="tab">
+		<li class="active"><a href="#use">用途</a></li>
+		<li><a href="#color">色</a></li>
+		<li><a href="#price">価格</a></li>
+	</ul>
+
+		<div id="use" class="area is-active">
+			<ul>
+            <li><a href="#">お誕生日</a></li>
+            <li><a href="#">結婚・出産祝い</a></li>
+            <li><a href="#">公演・コンサート・楽屋花</a></li>
+            <li><a href="#">開店・開業・移転等のお祝い</a></li>
+            <li><a href="#">記念日</a></li>
+            <li><a href="#">就任・昇進・昇格のお祝い</a></li>
+            <li><a href="#">お見舞い</a></li>
+            <li><a href="#">供花・お悔み・お供え</a></li>
+			</ul>
+		<!--/area--></div>
+		<div id="color" class="area">
+			<ul>
+            <li><a href="#">イエロー</a></li>
+            <li><a href="#">オレンジ</a></li>
+            <li><a href="#">ピンク</a></li>
+            <li><a href="#">レッド</a></li>
+            <li><a href="#">ブルー</a></li>
+            <li><a href="#">パープル</a></li>
+            <li><a href="#">ホワイト</a></li>
+            <li><a href="#">ミックス</a></li>
+			</ul>
+		<!--/area--></div>
+		<div id="price" class="area">
+			<ul>
+            <li><a href="#">&yen; 1,000 -</a></li>
+            <li><a href="#">&yen; 2,000 -</a></li>
+            <li><a href="#">&yen; 3,000 -</a></li>
+            <li><a href="#">&yen; 4,000 -</a></li>
+            <li><a href="#">&yen; 5,000 -</a></li>
+            <li><a href="#">オーダーメイド</a></li>
+			</ul>
+		<!--/area--></div> 
+<!--/tab-area--></div> 
+<!--/sub-fix-block--></div>    
+
+<div class="flower3 fadeDownTrigger"></div>
+<div class="flower4 fadeDownTrigger"></div>
+<div class="flower5 fadeDownTrigger"></div>
+<div class="flower6 fadeDownTrigger"></div>
+<div class="flower7 fadeDownTrigger"></div>
+<div class="flower8 fadeDownTrigger"></div>
+</aside>
+    
+<!--/wrapper--></div>
+
+<footer id="footer" class="fadeUpTrigger">
+    <div class="footer-area">
+    <ul>
+        <li><a href="#">プライバシーポリシー</a></li>
+        <li><a href="#">お支払方法について</a></li>
+        <li><a href="#">配達について</a></li>
+        <li><a href="#">特定商取引法に基づく表示</a></li>
+    </ul>
+    <ul>
+        <li><a href="#">花束・ブーケ</a></li>
+        <li><a href="#">アレンジメント</a></li>
+        <li><a href="#">プリザーブドフラワー</a></li>
+        <li><a href="#">季節限定</a></li>
+    </ul>
+    <ul>
+        <li><a href="#">用途で探す</a></li>
+        <li><a href="#">色で探す</a></li>
+        <li><a href="#">価格で探す</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+    </ul>
+    <dl>
+        <dt>Green Market</dt>
+        <dd>〒184-0001<br>東京都小金井市関野町1-13-1</dd>
+        <dd><a href="tel:03-1234-5678">Tel:03-1234-5678</a></dd>
+        <dd>電話受付：平日9:00-17:00</dd>
+    </dl>
+    </div>
+    <small>&copy; Green Market</small>
+</footer>
+<div id="page-top"><a href="#header">Page<br>Top</a></div>
+  
+
+<div class="flower1 fadeDownTrigger"></div>
+<div class="flower2 fadeDownTrigger"></div>
+
+
+<!--=============JS ===============--> 
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!--機能編 5-1-10 スクロールすると位置が固定して追従-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js"></script>
+<!--機能編 6-2-4　サムネイルをクリックすると、メイン画像が切り替わる1-->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!--機能編 9-3-1 ツールチップ-->
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5"></script>
+<!--機能編 9-6-1　ページを開くと、背景が暗くなりテキストを表示-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<!--自作のJS-->
+<script src="js/script.js"></script>
+</body>
+</html>

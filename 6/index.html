@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>1-6 ポートフォリオサイト</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+<meta name="robots" content="noindex,nofollow"><meta name="keywords"  content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--=============Google Font ===============-->
+<link href="https://fonts.googleapis.com/css?family=Baskervville%7CLa+Belle+Aurore&display=swap" rel="stylesheet">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<!--機能編 6-1-3 ゆっくりズームアウトさせながら全画面で見せる-->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+<!--機能編 9-6-3 リンクをクリックすると、背景が暗くなり動画や画像やテキストを表示-->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+<!--自作のCSS-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/parts.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+
+<body>
+	<div id="splash">
+		<div id="splash_text"></div>
+		<div class="loader_cover loader_cover-up"></div>
+		<div class="loader_cover loader_cover-down"></div>
+	</div>
+    
+<header id="header">
+<div id="slider"> 
+    <div class="heading-block">
+    <h1 class="blurTrigger">Ryoko Kubota</h1>
+    <p class="blurTrigger">Photographer</p>
+    <!--/heading-block--></div>
+    <ul id="sns-icon">
+    <li><a href="#"><img src="svg/ico_insta.svg" alt="Instagram"></a></li>
+    <li><a href="#"><img src="svg/ico_fb.svg" alt="Facebook"></a></li>
+    <li><a href="#"><img src="svg/ico_tw.svg" alt="Twitter"></a></li>
+    </ul>
+<!--/slider--></div>
+</header>
+<main>
+	<section id="box1" class="box" data-section-name="Profile">
+		<div class="box-area">
+            <div class="profile-area blurTrigger">
+            <h2>Photograper <span>Ryoko Kubota</span></h2>
+            <p>Birth Place : Hiroshima<br>Birthday : 2000.11.4</p>
+            <dl><dt>Awards</dt>
+                <dd>Camera Award 2020</dd>
+                <dd>Beautiful Photos 2025</dd>
+                <dd>Young Photographer 2025</dd>
+            </dl>
+            </div>
+        </div>
+	<!--/box--></section>
+	
+	<section id="box2" class="box" data-section-name="Landscape">
+		<div class="box-area">
+        <h2 class="eachTextAnime">Landscape</h2>
+        <a href="#gallery-1" class="gradient4 btn-view blurTrigger">View Photos</a>
+        <!--/box-area--></div>
+        <div id="gallery-1" class="hide-area">
+		<p><img src="img/01.jpg" alt=""><span class="caption">Landscape 2010</span></p>
+		<p><img src="img/02.jpg" alt=""><span class="caption">Landscape 2011</span></p>
+		<p><img src="img/03.jpg" alt=""><span class="caption">Landscape 2012</span></p>
+		<p><img src="img/04.jpg" alt=""><span class="caption">Landscape 2013</span></p>
+		<p><img src="img/06.jpg" alt=""><span class="caption">Landscape 2014</span></p>
+		</div>
+	<!--/box--></section>
+	
+	<section id="box3" class="box" data-section-name="Women">
+		<div class="box-area">
+		<h2 class="eachTextAnime">Women</h2>
+        <a href="#gallery-2" class="gradient4 btn-view blurTrigger">View Photos</a>
+        <!--/box-area--></div>
+        <div id="gallery-2" class="hide-area">
+		<p><img src="img/07.jpg" alt=""><span class="caption">Woman 2001</span></p>
+		<p><img src="img/08.jpg" alt=""><span class="caption">Woman 2002</span></p>
+		<p><img src="img/09.jpg" alt=""><span class="caption">Woman 2003</span></p>
+		<p><img src="img/10.jpg" alt=""><span class="caption">Woman 2004</span></p>
+		<p><img src="img/11.jpg" alt=""><span class="caption">Woman 2005</span></p>
+		</div>
+	<!--/box--></section>
+	
+	<section id="box4" class="box" data-section-name="Flower">
+        <div class="box-area">
+		<h2 class="eachTextAnime">Flower</h2>
+        <a href="#gallery-3" class="gradient4 btn-view blurTrigger">View Photos</a>
+        <!--/box-area--></div>
+        <div id="gallery-3" class="hide-area">
+		<p><img src="img/12.jpg" alt=""><span class="caption">Flower 2020</span></p>
+		<p><img src="img/13.jpg" alt=""><span class="caption">Flower 2021</span></p>
+		<p><img src="img/14.jpg" alt=""><span class="caption">Flower 2022</span></p>
+		<p><img src="img/15.jpg" alt=""><span class="caption">Flower 2023</span></p>
+		<p><img src="img/16.jpg" alt=""><span class="caption">Flower 2024</span></p>
+		</div>
+	<!--/box--></section>
+    
+    <section id="box5" class="box" data-section-name="Contact">
+        <div class="box-area">
+		<h2 class="eachTextAnime">Contact</h2>
+        <a href="#form" class="gradient4 btn-view2 blurTrigger">Contact Form</a>
+        <!--/box-area--></div>
+        <section id="form" class="hide-area">
+            <h3>Contact Form</h3>
+        <form method="post" action="" enctype="multipart/form-data">
+        <ul class="form-list">
+        <li>
+        <dl>
+        <dt><label for="name">Name</label></dt>
+        <dd><input type="text" name="Name" id="name" size="60" value="">
+        </dd>
+        </dl>
+        </li>
+        <li>
+        <dl>
+        <dt><label for="email">E-mail</label></dt>
+        <dd><input type="email" name="E-mail" id="email" size="60" value="">
+        </dd>
+        </dl>
+        </li>
+        <li>
+        <dl>
+        <dt><label for="tel">Tel</label></dt>
+        <dd><input type="text" name="Tel" id="tel" size="60" value="">
+        </dd>
+        </dl>
+        </li>
+        <li>
+        <dl>
+        <dt><label for="msg">Message</label></dt>
+        <dd><textarea name="Message" id="msg" cols="50" rows="5"></textarea>
+        </dd>
+        </dl>
+        </li>
+        </ul>
+
+        <div class="submit-btn"><input type="submit" name="submit" value="Send"></div>
+        </form>
+        <!--/form--></section>
+	<!--/box--></section>
+	</main>
+  
+    
+	<footer id="footer">
+	<small>&copy; Ryoko Kubota All Rights Reserved.</small>
+	</footer>
+
+<!--=============JS ===============--> 
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!--機能編 4-1-3プログレスバー＋数字カウントアップ＋画面が開く-->
+<script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+<!--IE11用　不必要なら削除-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+<!--機能編 6-1-3 ゆっくりズームアウトさせながら全画面で見せる-->    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+<!--機能編 9-6-3 リンクをクリックすると、背景が暗くなり動画や画像やテキストを表示-->    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+<!--印象編　6-1　スクロールすると1画面移動-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
+<!--自作のJS-->    
+<script src="js/script.js"></script>
+</body>
+</html>

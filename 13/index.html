@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>1-13 和風サイト</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+<meta name="robots" content="noindex,nofollow"><meta name="keywords"  content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--=============Google Font ===============-->
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<!--機能編 6-1-2 フェードイン・アウトさせて全画面で見せる-->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<!--自作のCSS-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/parts.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+
+<body>
+<div id="splash">
+<div id="splash_logo">
+    <div id="splash_area">
+   <svg version="1.1" id="mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="507.8px" height="589.9px" viewBox="0 0 507.8 589.9" style="enable-background:new 0 0 507.8 589.9;" xml:space="preserve">
+            <path class="st0" d="M0,147.5v295l253.9,147.5l253.9-147.5v-295L253.9,0L0,147.5z M485.3,429.5L253.9,563.8L22.5,429.5V160.7
+                L253.9,26.1l231.4,134.3V429.5z"/>
+            <path class="st0" d="M234.4,303.3h-52.8c-4.5,0-8.4-3.6-8.4-8.4c0-4.5,3.6-8.4,8.4-8.4h52.5c-14.7-18-50.4-56.1-78.8-35.7
+                c-10.2,7.2-10.8,14.4-5.7,20.4c-20.4-1.2-36.3,3.6-36.3,22.2c0,19.2,17.4,24,39,22.5c-7.8,6.9-8.7,14.7,3,23.1
+                C183.7,359.1,219.7,321.3,234.4,303.3z"/>
+            <path class="st0" d="M262.3,314.4v29.7c0,4.5-3.6,8.4-8.1,8.4c-4.5,0-8.4-3.6-8.4-8.4v-29.7c-18,12-55.5,41.7-35.7,65
+                c7.2,8.4,14.1,9,20.4,4.5c-1.5,17.1,3.3,30.6,21.9,30.6c19.5,0,24-14.7,22.5-33c6.9,6.6,14.7,7.2,23.1-2.4
+                C317.7,356.1,280,326.7,262.3,314.4z"/>
+            <path class="st0" d="M273.7,286.6h52.5c4.5,0,8.1,3.6,8.1,8.4c0,4.5-3.6,8.4-8.1,8.4h-52.5c14.7,18,50.4,56.1,78.8,35.7
+                c10.2-7.2,10.8-14.4,5.7-20.4c20.4,1.2,36.3-3.6,36.3-22.2c0-19.2-17.4-24-39-22.5c7.8-6.9,8.7-14.7-3-23.1
+                C324,230.8,288.4,268.6,273.7,286.6z"/>
+            <path class="st0" d="M41.1,171.5v247.3l212.8,123.5l212.8-123.5V171.5L253.9,48L41.1,171.5z M429.2,396.9L253.9,498.8L78.5,396.9
+                V193L253.9,91.1L429.2,193V396.9z"/>
+            <path class="st0" d="M233.2,208c-6.9-6.6-14.7-7.2-23.1,2.4c-20.1,23.4,17.7,52.8,35.7,65v-29.7c0-4.5,3.6-8.4,8.4-8.4
+                c4.5,0,8.1,3.6,8.1,8.4v29.7c18-12,55.5-41.7,35.7-65c-7.2-8.4-14.1-9-20.4-4.5c1.5-17.1-3.3-30.6-21.9-30.6
+                C235.9,175.1,231.4,189.7,233.2,208z"/>
+            </svg>
+</div>
+<!--/splash-logo--></div>
+<!--/splash--></div>
+<div class="splashbg"></div><!---画面遷移用-->
+
+<div id="container">
+
+<header id="header">
+<div class="header-area">
+<h1>新橋料亭<span>お江戸</span></h1>
+<p>東京新橋で<br>二百年続く老舗料亭</p>
+</div>
+<ul class="sns-link">
+<li><a href="#"><img src="img/ico_tw.svg" alt="Twitter"></a></li>
+<li><a href="#"><img src="img/ico_insta.svg" alt="Instagram"></a></li>
+<li><a href="#"><img src="img/ico_fb.svg" alt="Facebook"></a></li>
+</ul>
+</header>
+
+<div id="content-area">
+
+<div class="openbtn"><span></span><span>Menu</span><span></span></div>
+<div id="main-nav">
+<nav id="g-nav">
+    <div id="g-nav-list">
+        <ul>
+            <li class="current"><a href="#">トップ</a></li>
+            <li><a href="#">お品書き</a></li>
+            <li><a href="#">こだわり</a></li>
+            <li><a href="#">交通アクセス</a></li>
+        </ul>
+    </div>
+    </nav>
+<div class="circle-bg"></div>
+
+    <dl>
+    <dt>ご予約・お問い合わせ</dt>
+    <dd><a href="tel:03-124-5678">03-1234-5678</a></dd>
+    </dl>
+</div><!--/main-nav-->
+ 
+<div id="slider-area">
+<ul class="slider">
+		<li class="slider-item slider-item01"></li>
+		<li class="slider-item slider-item02"></li>
+		<li class="slider-item slider-item03"></li>
+</ul>
+<span class="scrolldown1"></span>
+</div><!--/slider-area-->
+
+
+<main id="main-area">
+    <section id="lead" class="blurTrigger">
+        <div class="lead-area">
+        <div class="lead-heading"><h2>繊細な<br>日本料理に<br>舌鼓を打つ</h2></div>
+        <div class="lead-desc">
+        <p>すき焼き、天ぷら、寿司<br>伝統的な日本料理を私たちは二百年前から、こだわりを持って作り続けています。</p>
+        <p>東京新橋の片隅にある日本家屋で、こだわりの料理に舌鼓を打ちながら、どうぞごゆっくりお過ごしください。</p>
+        <div class="lead-btn"><a href="#" class="btnarrow5">お江戸のこだわり</a></div>
+        </div>
+        <div class="svganimeblock">
+            <svg version="1.1" class="svganime" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="507.8px" height="589.9px" viewBox="0 0 507.8 589.9" style="enable-background:new 0 0 507.8 589.9;" xml:space="preserve">
+            <path class="st0" d="M0,147.5v295l253.9,147.5l253.9-147.5v-295L253.9,0L0,147.5z M485.3,429.5L253.9,563.8L22.5,429.5V160.7
+                L253.9,26.1l231.4,134.3V429.5z"/>
+            <path class="st0" d="M234.4,303.3h-52.8c-4.5,0-8.4-3.6-8.4-8.4c0-4.5,3.6-8.4,8.4-8.4h52.5c-14.7-18-50.4-56.1-78.8-35.7
+                c-10.2,7.2-10.8,14.4-5.7,20.4c-20.4-1.2-36.3,3.6-36.3,22.2c0,19.2,17.4,24,39,22.5c-7.8,6.9-8.7,14.7,3,23.1
+                C183.7,359.1,219.7,321.3,234.4,303.3z"/>
+            <path class="st0" d="M262.3,314.4v29.7c0,4.5-3.6,8.4-8.1,8.4c-4.5,0-8.4-3.6-8.4-8.4v-29.7c-18,12-55.5,41.7-35.7,65
+                c7.2,8.4,14.1,9,20.4,4.5c-1.5,17.1,3.3,30.6,21.9,30.6c19.5,0,24-14.7,22.5-33c6.9,6.6,14.7,7.2,23.1-2.4
+                C317.7,356.1,280,326.7,262.3,314.4z"/>
+            <path class="st0" d="M273.7,286.6h52.5c4.5,0,8.1,3.6,8.1,8.4c0,4.5-3.6,8.4-8.1,8.4h-52.5c14.7,18,50.4,56.1,78.8,35.7
+                c10.2-7.2,10.8-14.4,5.7-20.4c20.4,1.2,36.3-3.6,36.3-22.2c0-19.2-17.4-24-39-22.5c7.8-6.9,8.7-14.7-3-23.1
+                C324,230.8,288.4,268.6,273.7,286.6z"/>
+            <path class="st0" d="M41.1,171.5v247.3l212.8,123.5l212.8-123.5V171.5L253.9,48L41.1,171.5z M429.2,396.9L253.9,498.8L78.5,396.9
+                V193L253.9,91.1L429.2,193V396.9z"/>
+            <path class="st0" d="M233.2,208c-6.9-6.6-14.7-7.2-23.1,2.4c-20.1,23.4,17.7,52.8,35.7,65v-29.7c0-4.5,3.6-8.4,8.4-8.4
+                c4.5,0,8.1,3.6,8.1,8.4v29.7c18-12,55.5-41.7,35.7-65c-7.2-8.4-14.1-9-20.4-4.5c1.5-17.1-3.3-30.6-21.9-30.6
+                C235.9,175.1,231.4,189.7,233.2,208z"/>
+            </svg>
+        <!--/svganimeblock--></div>
+        <!--/lead-area--></div>
+    </section>
+
+    <section id="menu">
+        <div class="menu-bg">
+        <span class="scrolldown1"></span>
+        <!--/menu-bg--></div>
+        <div class="heading-block">
+            <h2 class="blurTrigger">お品書き</h2>
+        <!--/heading-block--></div>
+        <section>
+            <div class="menu-img lineTrigger">
+                <div class="line2">
+                    <div class="lineinappear">
+                        <div class="menu-img-detail"></div>
+                    </div>
+                </div>
+            <!--/lineTrigger--></div>
+            <div class="menu-content">
+            <div class="menu-box blurTrigger">
+            <h3>前　菜</h3>
+            <p>料理人が一品一品真心を込めて四季折々の食材でおつくりする前菜。<br>盛り付けにも遊び心を加えています。</p>
+            <!--/menu-box--></div>
+            <!--/menu-content--></div>
+        </section>
+          <section>
+            <div class="menu-img lineTrigger">
+                <div class="line2">
+                    <div class="lineinappear">
+                        <div class="menu-img-detail"></div>
+                    </div>
+                </div>
+            <!--/lineTrigger--></div>
+            <div class="menu-content">
+            <div class="menu-box blurTrigger">
+            <h3>向付け</h3>
+            <p>お江戸の食材は、料理長自ら毎朝豊洲市場まで買い付けにいきます。<br>旬のお魚をお楽しみください。</p>
+            <!--/menu-box--></div>
+            <!--/menu-content--></div>
+        </section>
+        <section>
+            <div class="menu-img lineTrigger">
+                <div class="line2">
+                    <div class="lineinappear">
+                        <div class="menu-img-detail"></div>
+                    </div>
+                </div>
+            <!--/lineTrigger--></div>
+            <div class="menu-content">
+            <div class="menu-box blurTrigger">
+            <h3>お凌ぎ</h3>
+            <p>お寿司や茶そばをご用意しております。お蕎麦は新潟からそば粉を取り寄せ、厨房で打ってお出ししております。</p>
+            <!--/menu-box--></div>
+            <!--/menu-content--></div>
+        </section>
+    </section>
+     <section id="access">
+        <div class="access-bg">
+        <span class="scrolldown1"></span>
+        <!--/menu-bg--></div>
+        <div class="heading-block">
+            <h2 class="blurTrigger">アクセス</h2>
+        <!--/heading-block--></div>
+ 
+        <section class="access-area">
+            <div class="access-map"><div class="iframe-wrap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6481.525736426524!2d139.77115757614774!3d35.682840470775645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601889570025d10b%3A0xd0bd62fa491c487a!2z44CSMTAzLTAwMjcg5p2x5Lqs6YO95Lit5aSu5Yy65pel5pys5qmL77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1577177573320!5m2!1sja!2sjp" width="600" height="450" frameborder="0" allowfullscreen=""></iframe>
+            </div> 
+            <!--/access-map--></div>
+
+            <div class="access-block blurTrigger">
+                <div class="access-box">
+                <h3>新橋料亭 お江戸</h3>
+                <p>〒 111-0000<br>東京都中央区1-1-1<br>JR新橋駅より徒歩5分</p>
+                <a href="#" class="btnarrow5">Google Mapで見る</a>
+                </div>
+            <!--/access-block--></div>
+        </section>
+     </section>
+    
+    <section id="reserve" class="lineTrigger">
+    <div class="line2">
+    <div class="lineinappear">
+    <span class="scrolldown1"></span>
+        <div class="reserve-area">
+        <h2>ご予約・お問い合わせ</h2>
+        <p class="tel"><a href="tel:03-1234-5678">03-1234-5678</a></p>
+        <p>営業時間：17:00-22:00<br>（最終入店 20:00）</p>
+        <!--/reserve-area--></div>
+    </div>
+    </div>
+    </section>
+</main>
+
+<footer id="footer">
+    <div class="footer-area">
+    <div class="footer-info">
+    <p class="footer-logo">新橋料亭<span>お江戸</span></p>
+    </div>
+    
+    <div class="footer-link">
+        <ul>
+        <li><a href="#">トップ</a></li>
+        <li><a href="#">お品書き</a></li>
+        <li><a href="#">こだわり</a></li>
+        <li><a href="#">交通アクセス</a></li>
+		</ul>
+
+        <ul class="sns-link">
+        <li><a href="#"><img src="img/ico_tw.svg" alt="Twitter"></a></li>
+        <li><a href="#"><img src="img/ico_insta.svg" alt="Instagram"></a></li>
+        <li><a href="#"><img src="img/ico_fb.svg" alt="Facebook"></a></li>
+        </ul> 
+    </div>  
+    </div>
+    <small>&copy; Oedo all rights Reserved.</small>
+    <p id="page-top"><a href="#"><span></span></a></p>
+</footer>
+<!--/content-area--></div>
+<!--/container--></div>
+
+<!--=============JS ===============--> 
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!--機能編 6-1-2 フェードイン・アウトさせて全画面で見せる-->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!--印象編 9-4-1 SVG アニメーション-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+<!--自作のJS-->   
+<script src="js/script.js"></script>
+</body>
+</html>

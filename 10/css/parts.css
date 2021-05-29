@@ -1,0 +1,578 @@
+@charset "utf-8";
+
+/*===========================================================*/
+/*機能編  4-1-6 手書き風ロゴアニメーション*/
+/*===========================================================*/
+
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background:#333;
+	text-align:center;
+	color:#fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo svg{
+	width:300px;
+}
+
+/*========= SVG操作手書き風にするためのCSS ===============*/
+
+#mask .st0{
+    fill:none;
+    stroke:#fff;
+    stroke-width:90;/*線の太さを指定する*/
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+    stroke-dasharray: 1500; /* 線の間隔を指定する */
+    stroke-dashoffset:1500; /* 線の位置を指定する */
+}
+
+/*===========================================================*/
+/*機能編  4-2-8 背景色が円形に縮小（中央へ）*/
+/*===========================================================*/
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+
+.splashbg {
+    display: none;
+	position:fixed;
+	transform: scale(100);
+	background-color: #333;/*伸びる背景色の設定*/
+	z-index: 999;
+    /*丸のスタートの形状*/
+    top:calc(50% - 1rem);/*50%から円の半径を引いた値*/
+    left:calc(50% - 1rem);/*50%から円の半径を引いた値*/
+	width: 2rem;
+	height: 2rem;
+}
+body.appear .splashbg{
+    display: block;
+    border-radius: 50%;	
+	animation-name:PageAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes PageAnime{
+	0% {/*丸のスタート位置と形状*/
+		transform: scale(100);
+	
+	}
+	100% {/*丸の終了位置と形状*/
+		transform: scale(0);
+		display: none;/*終了時は消える*/
+	}
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+	opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay: 0.8s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
+/*===========================================================*/
+/*機能編  　5-3-4 左から右に線が伸びる（上部）
+/*===========================================================*/
+
+.gnavi{
+	display: flex;
+	justify-content: center;
+	list-style: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+}
+
+.gnavi a{
+	display: block;
+	padding:10px 30px;	
+    color:rgba(255,255,255,0.7);
+    text-decoration: none;
+}
+
+.nav01d li a{
+    /*線の基点とするためrelativeを指定*/
+	position: relative;
+}
+
+.nav01d li.current a,
+.nav01d li a:hover{
+	color:rgba(255,255,255,0.7);
+}
+
+.nav01d li a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    top: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background:rgba(255,255,255,0.7);
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: left top;/*左上基点*/
+}
+
+/*現在地の形状の設定*/
+.nav01d li.current a::after {
+    transform: scale(0.2, 1);/*X方向に0.2スケール拡大*/
+}
+
+/*現在地を含むhoverの設定*/
+.nav01d li.current a:hover::after,
+.nav01d li a:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
+/*===========================================================*/
+/* 順番に現れる（CSS）
+/*===========================================================*/
+
+.nav01d li:nth-of-type(1){
+    animation-delay: .2s;
+}
+
+.nav01d li:nth-of-type(2){
+    animation-delay: .3s;
+}
+
+.nav01d li:nth-of-type(3){
+    animation-delay: .4s;
+}
+
+.nav01d li:nth-of-type(4){
+    animation-delay: .5s;
+}
+
+/*===========================================================*/
+/*機能編  　5-1-20 クリックしたら円形背景が拡大（右上から）
+/*===========================================================*/
+
+/*========= ナビゲーションのためのCSS ===============*/
+@media screen and (max-width:768px) {
+    
+/*アクティブになったエリア*/
+#g-nav.panelactive{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+	top: 0;
+    right: inherit;
+	width:100%;
+    height: 100vh;
+}
+
+/*丸の拡大*/
+.circle-bg{
+    position: fixed;
+	z-index:3;
+    /*丸の形*/
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #333;
+    /*丸のスタート位置と形状*/
+	transform: scale(0);/*scaleをはじめは0に*/
+	right:-15px;
+    top:-15px;
+    transition: all .6s;/*0.6秒かけてアニメーション*/
+}
+
+.circle-bg.circleactive{
+	transform: scale(50);/*クラスが付与されたらscaleを拡大*/
+}
+
+    
+/*ナビゲーションの縦スクロール*/
+#g-nav-list{
+    display: none;/*はじめは表示なし*/
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#g-nav.panelactive #g-nav-list{
+     display: block; /*クラスが付与されたら出現*/
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+	opacity: 0;/*はじめは透過0*/
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*背景が出現後にナビゲーションを表示*/
+#g-nav.panelactive ul {
+    opacity:1;
+    flex-wrap: wrap;
+}
+
+/*リストのレイアウト設定*/
+#g-nav.panelactive li{
+	text-align: center; 
+    width: 100%;
+}
+
+#g-nav.panelactive li a{
+    padding:15px 0;
+	display: block;
+}
+    
+}
+
+/*==================================================
+機能編 　5-2-6 3本線が回転して×に
+===================================*/
+
+.openbtn{
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+
+/*ボタン外側*/
+.openbtn{
+	position:fixed;
+    display: block;
+	top:10px;
+	right: 10px;
+	z-index: 9999;/*ボタンを最前面に*/
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+    background: #d87514;
+	border-radius: 5px;
+}
+
+/*ボタン内側*/
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+	background: #fff;
+  }
+
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+  	width: 45%;
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+  	width: 35%;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+  	width: 20%;
+}
+
+/*activeクラスが付与されると線が回転して×になる*/
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-135deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(135deg);
+    width: 30%;
+}
+
+}
+/*===========================================================*/
+/*機能編  7-1-12 無限に波紋が広がる
+/*===========================================================*/
+
+.btnripple2{
+    position:fixed;
+    z-index: 2;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid #fff;
+    background:transparent;
+    /*波紋の形状*/
+	display:inline-block;
+	width:70px;
+	height:70px;
+	border-radius: 50%;
+    /*アニメーションの設定*/
+    transition: all .3s;
+    outline:none;
+}
+
+/*hoverした際の背景色の設定*/
+.btnripple2:hover{
+	background:#d87514;	
+    border-color: transparent;
+}
+
+/*波形を2つ設定*/
+.btnripple2::after,
+.btnripple2::before {
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left: -25%;
+    top: -25%;
+    /*波形の形状*/
+    border: 1px solid #fff;
+    width: 150%;
+    height: 150%;
+    border-radius: 50%;
+    /*はじめは不透明*/
+    opacity: 1;
+    /*ループするアニメーションの設定*/
+    animation:1s circleanime linear infinite;
+}
+
+/*波形の2つ目は0.5秒遅らせてアニメーション*/
+.btnripple2::before {
+    animation-delay:.5s; 
+}
+
+/*波形のアニメーション*/
+@keyframes circleanime{
+	0%{
+	  transform: scale(0.68);
+	}
+	100%{
+		transform: scale(1.2);
+		opacity: 0;
+	}
+}
+
+/*中央矢印*/
+
+.btnripple2 span::after {
+    content: '';
+    /*絶対配置で矢印の位置を決める*/
+    position: absolute;
+    top: 38%;
+    left: 45%;
+    /*矢印の形状*/
+    border: 14px solid transparent;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-left-color: #fff;
+}
+
+/*===========================================================*/
+/*機能編  9-6-3 リンクをクリックすると、背景が暗くなり動画や画像やテキストを表示
+/*===========================================================*/
+
+/*========= モーダル表示のためのCSS ===============*/
+
+/*全て共通：hideエリアをはじめは非表示*/
+.hide-area{
+	display: none;
+}
+
+/*全て共通：モーダルのボタンの色を変更したい場合*/
+.modaal-close:after, 
+.modaal-close:before{
+	background:#ccc;	
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before{
+	background:#666;
+}
+
+/*余白を少なくする*/
+.modaal-content-container{
+ padding:10px;
+}
+
+
+/*===========================================================*/
+/*機能編  6-3-1 画面全体に背景動画を流す
+/*===========================================================*/
+
+/*========= 背景動画設定のCSS ===============*/
+
+/*container設定*/
+#container{
+    position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
+    height: 100vh;/*高さを全画面にあわせる*/
+} 
+
+#video-area{
+    position: fixed;
+    z-index: -1;/*最背面に設定*/
+    top: 0;
+    right:0;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+}
+
+#video {
+    /*天地中央配置*/
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.modaal-content-container video{
+    width:100%;
+}
+
+
+/*===========================================================*/
+/* 印象編 4 最低限おぼえておきたい動き
+/*===========================================================*/
+
+/* 4-1　ふわっ（上から） */
+
+.fadeDown{
+animation-name: fadeDownAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeDownAnime{
+  from {
+    opacity: 0;
+	transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+.fadeDownTrigger{
+    opacity: 0;
+}
+
+/*===========================================================*/
+/*印象編　8-5 テキストが流れるように出現（下から上）
+/*===========================================================*/
+
+.slide-in {
+	overflow: hidden;
+    display: inline-block;
+}
+
+.slide-in_inner {
+	display: inline-block;
+
+}
+
+/*上下のアニメーション*/
+
+.upAnime,
+.downAnime{
+    opacity: 0;/*事前に透過0にして消しておく*/
+}
+
+.slideAnimeDownUp {
+	animation-name: slideTextY100;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextY100 {
+  from {
+	transform: translateY(100%);/*要素を上の枠外に移動*/
+    opacity: 0;
+  }
+
+  to {
+	transform: translateY(0);/*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+.slideAnimeUpDown {
+	animation-name: slideTextY-100;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextY-100 {
+  from {
+	transform: translateY(-100%);/*要素を下の枠外に移動*/
+    opacity: 0;
+  }
+
+  to {
+	transform: translateY(0);/*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}

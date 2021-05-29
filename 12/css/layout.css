@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* レイアウトのためのCSS */
+
+body{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+	color: #fff;
+	font-size:1rem;
+	line-height:1.85;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%; 
+	word-wrap: break-word;
+}
+
+ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+
+a{
+	color: #fff;
+	text-decoration: none;
+    outline: none;
+}
+
+img{
+    max-width:100%;
+    height: auto;
+}
+
+*{
+    box-sizing: border-box
+}
+
+/* HEADER */
+
+nav{
+	position: relative;
+	z-index:999;
+	padding:5px 20px;
+}
+
+h1{
+    font-size: 2rem;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    letter-spacing: 0.1em;
+    width:10em;
+    opacity: 0;/*ローディング画面では透過*/
+}
+
+@media screen and (max-width:768px){
+ h1{
+    font-size: 1.5rem;
+    }
+}
+
+body.appear h1{
+    opacity: 1;
+}
+
+/* area */
+.sp-bottom{
+    text-align: center;
+}
+
+#left6 .sp-bottom{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);    
+}
+
+h2{
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+    margin: 0 0 30px 0;
+}
+
+@media screen and (max-width:550px){
+ h2{
+    font-size: 1.5rem;
+    }
+}
+
+
+#left6 .sp-bottom p{
+    margin:0 0 50px 0;
+    letter-spacing: 0.3em;
+    white-space: nowrap;
+}
+
+#left6 .sp-bottom ul{
+    display: flex;
+    justify-content: center;
+}
+
+#left6 .sp-bottom ul li{
+    margin: 0 10px;
+}
+
+#left6 .sp-bottom ul img{
+     height:25px;   
+}
+
+#footer{
+    position: fixed;
+    bottom:20px;
+    left: 20px;
+}
+
+@media screen and (max-width:550px){
+ 
+#footer{
+    bottom:inherit;
+    left: 20px;
+    top:20px;
+}   
+}

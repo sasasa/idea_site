@@ -1,0 +1,507 @@
+@charset "utf-8";
+
+/*==================================================
+　機能編 4-1-2	プログレスバー＋数字カウントアップ
+===================================*/
+
+/* Loading背景画面設定　*/
+
+#splash {
+    /*fixedで全面に固定*/
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background:#eee;
+	text-align:center;
+	color:#00b7b8;
+}
+
+/* Loadingバー中央配置　*/
+#splash_text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    z-index: 999;
+	width: 100%;
+	transform: translate(-50%, -50%);
+	color: #00b7b8;
+}
+
+/*IE11対策用バーの線の高さ※対応しなければ削除してください*/
+#splash_text svg{
+    height: 2px;
+}
+
+
+/*==================================================
+　機能編 5-1-13 クリックしたらナビが左から右に出現
+===================================*/
+
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
+    top:0;
+    left: -120%;
+    width:100%;
+    height: 100vh;/*ナビの高さ*/
+    background: linear-gradient(to top right, rgba(74,198,186,1), rgba(14,141,152,1));/*背景色（グラデーション）*/ 
+    /*動き*/
+    transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+    left: 0;
+}
+
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999; 
+    width:100%;
+    height: 100vh;/*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+	list-style: none;
+    text-align: center; 
+}
+
+#g-nav li a{
+	color: #333;
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+
+/*==================================================
+　機能編 5-2-3	3本線が1本線に
+===================================*/
+
+.openbtn{
+	position:fixed;
+    z-index: 9999;/*ボタンを最前面に*/
+	top:0;
+	left: 0;
+	cursor: pointer;
+    width: 70px;
+    height:100vh;
+    background:#f0f0f0;
+    border-right:1px solid #333;
+}
+	
+/*×に変化*/	
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 18px;
+    height: 3px;
+    border-radius: 2px;
+	background-color: #666;
+  	width: 45%;
+  }
+
+.openbtn span:nth-of-type(1) {
+    top:45vh;	
+}
+
+.openbtn span:nth-of-type(2) {
+    top:46vh;
+}
+
+.openbtn span:nth-of-type(3) {
+    top:47vh;
+}
+
+/*activeクラスが付与されると1・3番目の要素が2番目の要素と同じ位置になり一本線に*/
+
+.openbtn.active span:nth-of-type(1) ,
+.openbtn.active span:nth-of-type(3){
+    top:46vh;
+}
+
+@media screen and (max-width:960px) {
+ .openbtn{
+    width: 60px;
+    height: 60px;
+     border:none;
+}
+    
+.openbtn span:nth-of-type(1) {
+    top: 19px;
+    left: 15px;
+}
+    
+.openbtn span:nth-of-type(2) {
+    top: 28px;
+    left: 15px;
+}
+
+.openbtn span:nth-of-type(3) {
+    top: 37px;
+    left: 15px;
+}
+    
+.openbtn.active span:nth-of-type(1) ,
+.openbtn.active span:nth-of-type(3){
+    top:28px;
+}
+    
+}
+
+
+/*==================================================
+　機能編 7-1-18　影がついて浮き上がる
+===================================*/
+
+/*ボタンの形状*/
+.float3{
+	position:relative;
+	top:0;
+    padding:8px 40px;
+    display: inline-block;
+    border: 1px solid #333;
+    color: #333;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの設定*/
+    transition: all .3s;
+}
+
+/*hoverをしたらボックスに影がつき、上に上がる*/
+.float3:hover {
+	top:-3px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/*==================================================
+　機能編 7-1-23	線から塗に変化（左から右）
+===================================*/
+
+/* ボタン共通設定 */
+.btn04 {
+    /*線の基点とするためrelativeを指定*/
+	position: relative;
+    /*ボタンの形状*/
+	display:inline-block;
+    padding: 10px 30px;
+	margin: 0 10px 10px 10px;
+	color:#333;
+	border:1px solid #ccc;
+    text-decoration: none;
+    outline: none;
+    /*はみ出す背景色を隠す*/
+ 	overflow: hidden;
+}
+
+/*hoverした際のボタンの形状*/
+.btn04:hover {
+	color:#fff;
+	border-color: transparent;
+    /*色の変化を遅らせる*/
+	transition-delay: .6s;
+}
+
+/*線の設定*/
+.btn04 span{
+    display: block;
+    z-index: 2;
+}
+
+/*== 左から右 */
+
+/*線の設定*/
+.borderleft span::before,
+.borderleft span::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    width:0;
+    height:1px;
+    /*線の形状*/
+    background: #333;
+    /*アニメーションの設定*/
+	transition: all .3s;
+}
+
+/*左上線*/
+.borderleft span::before {
+    left:0;
+    top:0;
+}
+
+/*左下線*/
+.borderleft span::after {
+    left:0;
+    bottom:0;
+}
+
+/*hoverをすると線が伸びる*/
+.borderleft:hover span::before,
+.borderleft:hover span::after {
+    width: 100%;
+}
+
+/*背景の設定*/
+.borderleft::before{
+	content: '';
+    /*絶対配置で線の位置を決める*/
+	position: absolute;
+	left: 0;
+    bottom:0;
+	z-index: -1;
+    /*背景の形状*/
+	height: 100%;
+	width: 0;
+	background:#333;
+    /*アニメーションの設定*/
+	transition: all .3s;
+}
+
+/*hoverをすると背景が伸びる*/
+.borderleft:hover::before{
+	width: 100%;
+    /*0.4秒遅れてアニメーション*/
+	transition-delay: .4s;
+}
+
+/*===========================================================*/
+/* 機能編 7-1-36 線の上を別の線が伸びる*/
+/*===========================================================*/
+
+.btnlinestretches4{
+    /*線の基点とするためrelativeを指定*/
+	position:relative;
+    /*リンクの形状*/ 
+	color:#333;
+    padding: 10px 50px 10px 30px;
+	display:inline-block;
+    text-decoration: none;
+    outline: none;
+}
+
+/*線の設定*/
+.btnlinestretches4::before,
+.btnlinestretches4::after{
+	content:'';
+    /*絶対配置で線の位置を決める*/
+	position:absolute;
+	z-index:1;
+	bottom:0;
+	left:0;
+     /*線の形状*/   
+	background:#333;
+	width:100%;
+	height:2px;
+    /*アニメーションの指定*/
+	transition:all 0.3s ease-in-out;
+}
+
+ /*hover時に伸びる線の形状*/   
+.btnlinestretches4::after{
+	width:0;
+	background:#00b7b8;
+}
+
+ /*hover時に100%に伸びる*/   
+.btnlinestretches4:hover::after {
+	width:100%;
+}
+
+ /*矢印の設定*/   
+.btnlinestretches4 span::after {
+    content: '';
+    /*絶対配置で矢印の位置を決める*/
+    position: absolute;
+    top: 1.3em;
+    right: 20px;
+    /*矢印の形状*/   
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: rotate(45deg);
+    /*アニメーションの指定*/
+    transition: all .3s;
+}
+
+/*hover時に矢印が移動*/   
+.btnlinestretches4:hover span::after {
+	right:15px;
+    border-color: #00b7b8;
+}
+
+
+/*==================================================
+/* 印象編 4 最低限おぼえておきたい動き*/
+/*===================================*/
+
+/* 4-1 ふわっ（上から） */
+
+.fadeDown{
+animation-name: fadeDownAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeDownAnime{
+  from {
+    opacity: 0;
+	transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+
+/* 4-7 にゅーん（滑らかに変形して出現） */
+.smooth{
+	animation-name: smoothAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+  　transform-origin: left;
+	opacity:0;
+}
+
+@keyframes smoothAnime{
+  from {
+  transform: translate3d(0, 100%, 0) skewY(12deg);
+  opacity:0;
+  }
+
+  to {
+  transform: translate3d(0, 0, 0) skewY(0);
+  opacity:1;
+  }
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.fadeDownTrigger,
+.smoothTrigger{
+    opacity: 0;
+}
+
+/*===========================================================*/
+/* 印象編　7-2 画像が縮小 　*/
+/*===========================================================*/
+
+.zoomOut img{
+	transform: scale(1.1);
+	transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.zoomOut:hover img{/*hoverした時の変化*/
+	transform: scale(1);/*拡大の値を変更したい場合はこの数値を変更*/
+}
+
+
+.zoomOut .mask{
+    display: block;
+    height: 11vw;
+    overflow: hidden;
+}
+
+@media screen and (max-width:1020px) {
+.zoomOut .mask{
+    height: 25vw;
+}    
+}
+
+@media screen and (max-width:550px) {
+.zoomOut .mask{
+    height: 45vw;
+}     
+}
+
+/*===========================================================*/
+/* 印象編　5-3 流体シェイプ*/
+/*===========================================================*/
+
+.fluid {
+    width:100%;
+    height:100%;
+    background: linear-gradient(45deg,rgba(74,198,186,1),rgba(14,141,152,1));/*背景色（グラデーション）*/ 
+    animation: fluidrotate 30s ease 0s infinite;
+}
+
+
+@keyframes fluidrotate {  
+	  
+0%, 100% {
+    border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+}
+14% {
+    border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+}
+28% {
+    border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+}
+42% {
+    border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+}
+56% {
+    border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+}
+70% {
+    border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+}
+84% {
+    border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+}
+	  
+}
+
+
+/*===========================================================*/
+/* 印象編　5-4 幾何学模様*/
+/*===========================================================*/
+
+#particles-js{ 
+	position:fixed;/*描画固定*/
+	z-index:-1;/*描画を一番下に*/
+	width: 100%;
+	height: 100%;
+}
+
+#wrapper{
+	position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+	z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+}
+
+/*===========================================================*/
+/* 印象編　5-11 波打つ（1 つ 重なりあり）*/
+/*===========================================================*/
+
+#waveCanvas{
+    position: absolute;
+    bottom: 0;
+	left:0;
+    width: 100%;
+}

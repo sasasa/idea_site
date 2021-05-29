@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>1-12　ファッションサイト</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+<meta name="robots" content="noindex,nofollow"><meta name="keywords"  content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--=============Google Font ===============-->
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<!--印象編　6-3　スクロールすると画面分割した左右がそれぞれ動く-->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/multiscroll.js/0.2.2/jquery.multiscroll.css">
+<!--自作のCSS-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/parts.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+
+<body>
+<div id="splash">
+<div id="splash_logo">
+<svg version="1.1" id="mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1010.6px" height="121px" viewBox="0 0 1010.6 121" style="enable-background:new 0 0 1010.6 121;" xml:space="preserve">
+<g>
+	<path class="st0" d="M32.8,121C12,121,1,109,0,84.9L18.7,81c0.5,15.6,4.9,23.5,13.4,23.5c3.3,0,5.7-1,7.3-3c1.6-2,2.4-4.7,2.4-8.1
+		c0-3.3-0.6-6.3-1.8-9c-1.2-2.7-2.6-5-4.1-6.7c-1.6-1.7-3.8-3.9-6.7-6.5L13.7,57.7c-4.6-4-8-8.1-10.2-12.4C1.3,41,0.1,35.6,0.1,29.2
+		c0-9.2,2.7-16.3,8.1-21.4C13.6,2.7,21,0.1,30.4,0c4.3,0,8.2,0.5,11.5,1.6c3.3,1.1,6.1,2.6,8.2,4.5c2.2,1.9,4,4.2,5.4,7
+		c1.4,2.8,2.5,5.7,3.2,8.7c0.7,3,1.2,6.4,1.5,10.1l-18.4,3.6c-0.1-2.4-0.2-4.4-0.5-6.2c-0.2-1.8-0.6-3.5-1.1-5.3
+		c-0.5-1.8-1.2-3.3-2-4.4c-0.8-1.1-1.9-2-3.4-2.7c-1.4-0.7-3-0.9-4.9-0.8c-3.2,0.2-5.6,1.2-7.3,3.2c-1.7,1.9-2.5,4.5-2.5,7.7
+		c0,3.8,0.7,6.9,2.2,9.4c1.5,2.4,3.8,5.1,7,7.9l15.4,13.4c2.6,2.3,4.8,4.6,6.7,6.8c1.9,2.2,3.7,4.7,5.5,7.5c1.7,2.8,3.1,5.9,4,9.3
+		c0.9,3.4,1.4,6.9,1.4,10.7c0,8.6-2.7,15.6-8.2,21C48.8,118.3,41.6,121,32.8,121z"/>
+	<path class="st0" d="M83.5,119.6L85.5,1.4h22.1l17.1,83.1l17.6-83.1h21.6l2,118.2h-16.3l-1.4-81.4l-17,81.4h-12.6l-17.3-81.7
+		l-1.3,81.7H83.5z"/>
+	<path class="st0" d="M186,119.6L210,1.4h22.5l24,118.2h-20l-4.8-27.4h-20.5l-4.8,27.4H186z M213.4,78.1h15.8l-7.9-48.5L213.4,78.1z
+		"/>
+	<path class="st0" d="M276.8,119.6V1.4h27.1c6.2,0,11.6,0.5,16,1.5c4.5,1,8.4,2.7,11.7,5.1c3.3,2.4,5.8,5.7,7.4,9.8
+		c1.6,4.1,2.5,9.1,2.5,15.1c0,7.4-1.1,13.5-3.3,18.2s-5.9,8.1-10.9,10.3l16.4,58.2H322l-14.1-54h-9.6v54H276.8z M298.3,51.8h5.2
+		c6.4,0,10.9-1.4,13.6-4.1c2.7-2.7,4-7.3,4-13.9c0-6.3-1.2-10.8-3.5-13.6c-2.3-2.7-6.6-4.1-12.8-4.1h-6.5V51.8z"/>
+	<path class="st0" d="M378.1,119.6V17.3h-19.8V1.4h60.5v15.9h-19.2v102.3H378.1z"/>
+	<path class="st0" d="M481.4,119.6V1.4h48.5v14.9h-27v34.4h21.6v15.2h-21.6v53.8H481.4z"/>
+	<path class="st0" d="M543.9,119.6l24-118.2h22.5l24,118.2h-20l-4.8-27.4H569l-4.8,27.4H543.9z M571.3,78.1h15.8l-7.9-48.5
+		L571.3,78.1z"/>
+	<path class="st0" d="M664.5,121c-20.8,0-31.7-12-32.8-36.1l18.7-3.9c0.5,15.6,4.9,23.5,13.4,23.5c3.3,0,5.7-1,7.3-3
+		c1.6-2,2.4-4.7,2.4-8.1c0-3.3-0.6-6.3-1.8-9c-1.2-2.7-2.6-5-4.1-6.7c-1.6-1.7-3.8-3.9-6.7-6.5l-15.5-13.5c-4.6-4-8-8.1-10.2-12.4
+		c-2.2-4.3-3.4-9.7-3.4-16.1c0-9.2,2.7-16.3,8.1-21.4c5.4-5.1,12.8-7.7,22.2-7.8c4.3,0,8.2,0.5,11.5,1.6c3.3,1.1,6.1,2.6,8.2,4.5
+		c2.2,1.9,4,4.2,5.4,7c1.4,2.8,2.5,5.7,3.2,8.7c0.7,3,1.2,6.4,1.5,10.1l-18.4,3.6c-0.1-2.4-0.3-4.4-0.5-6.2
+		c-0.2-1.8-0.6-3.5-1.1-5.3c-0.5-1.8-1.2-3.3-2-4.4c-0.8-1.1-2-2-3.4-2.7c-1.4-0.7-3-0.9-4.9-0.8c-3.2,0.2-5.6,1.2-7.3,3.2
+		c-1.7,1.9-2.5,4.5-2.5,7.7c0,3.8,0.7,6.9,2.2,9.4c1.5,2.4,3.8,5.1,7,7.9l15.4,13.4c2.6,2.3,4.8,4.6,6.7,6.8
+		c1.9,2.2,3.7,4.7,5.5,7.5c1.7,2.8,3.1,5.9,4,9.3c0.9,3.4,1.4,6.9,1.4,10.7c0,8.6-2.7,15.6-8.2,21C680.5,118.3,673.3,121,664.5,121z
+		"/>
+	<path class="st0" d="M715.7,119.6V1.4h21.5v49.4h24V1.4h21.5v118.2h-21.5V66.1h-24v53.5H715.7z"/>
+	<path class="st0" d="M810,119.6V1.4h21.2v118.2H810z"/>
+	<path class="st0" d="M890.4,121c-12.2,0-20.9-3.3-26.2-9.9c-5.3-6.6-7.9-16.3-7.9-29V38.4c0-6.3,0.6-11.7,1.8-16.3
+		c1.2-4.6,3.1-8.6,5.7-12c2.6-3.4,6.2-5.9,10.6-7.6c4.4-1.7,9.7-2.5,16-2.5c12.1,0,20.8,3.3,26.1,9.8c5.3,6.5,7.9,16.1,7.9,28.7
+		v43.6c0,6.2-0.6,11.6-1.8,16.3c-1.2,4.7-3.1,8.7-5.8,12.2c-2.6,3.4-6.2,6-10.6,7.8S896.6,121,890.4,121z M885,104.1
+		c1.5,0.6,3.3,0.9,5.4,0.9c2.1,0,3.9-0.3,5.3-0.9c1.5-0.6,2.6-1.4,3.5-2.4c0.9-1,1.6-2.3,2.1-3.9c0.5-1.6,0.8-3.2,1-4.8
+		c0.2-1.6,0.3-3.5,0.3-5.8V33.4c0-2.9-0.1-5.2-0.4-7.1c-0.3-1.9-0.8-3.7-1.7-5.4c-0.8-1.7-2.1-2.9-3.7-3.8c-1.7-0.8-3.8-1.2-6.3-1.2
+		s-4.7,0.4-6.4,1.2c-1.7,0.8-2.9,2.1-3.7,3.8c-0.8,1.7-1.4,3.5-1.6,5.4c-0.3,1.9-0.4,4.3-0.4,7.1v53.7c0,2.2,0.1,4.2,0.3,5.8
+		c0.2,1.6,0.5,3.2,1,4.8c0.5,1.6,1.2,2.9,2,3.9S883.5,103.5,885,104.1z"/>
+	<path class="st0" d="M949,119.6V1.4h14.8l28.9,66.9V1.4h17.8v118.2h-14.1l-29.2-70.4v70.4H949z"/>
+</g>
+</svg>
+<!--/splash-logo--></div>
+<!--/splash--></div>
+<div class="splashbg"></div><!---画面遷移用-->
+    
+<div id="container">
+<header id="header">
+	<nav>
+	<ul id="menu">
+		<li data-menuanchor="area1"><a href="#area1">Top</a></li>
+		<li data-menuanchor="area6"><a href="#area6">Contact</a></li>
+	</ul>
+	</nav>
+</header>
+
+<div id="wrapper">
+
+	<div class="ms-left">
+		<div class="ms-section" id="left1">
+            <h1 class="TextTyping">Smart Fashion 2025 AW Collection Lookbook</h1>
+            <div class="particle" id="pt1"></div>
+        </div>
+		<section class="ms-section" id="left2">
+            <div class="sp-top"></div>
+			<div class="sp-bottom">
+			<h2>Women's Collection</h2>
+            <a href="#" class="btn bgleft"><span>Collection</span></a>
+			</div>
+        </section>
+		<section class="ms-section" id="left3">
+            <div class="sp-top"></div>
+			<div class="sp-bottom">
+			<h2>Men's Collection</h2>
+            <a href="#" class="btn bgleft"><span>Collection</span></a>
+			</div>
+        </section>
+		<div class="ms-section" id="left4">
+			<div class="sp-top"></div>
+			<div class="sp-bottom"></div>
+        <div class="particle" id="pt3"></div>
+        </div>
+		<div class="ms-section" id="left5">
+			<div class="sp-top"></div>
+			<div class="sp-bottom"></div>
+        <div class="particle" id="pt5"></div>
+        </div>
+		<section class="ms-section" id="left6">
+			<div class="sp-bottom">
+			<h2>Contact</h2>
+			<p>TEL:03-1234-5678</p>
+            <ul>
+                <li><a href="#" target="_blank"><img src="img/ico_insta.svg" alt=""></a></li>
+                <li><a href="#" target="_blank"><img src="img/ico_tw.svg" alt=""></a></li>
+                <li><a href="#" target="_blank"><img src="img/ico_fb.svg" alt=""></a></li>
+            </ul>
+			</div>        
+        </section>
+	<!--/ms-left--></div>
+	
+	<div class="ms-right">
+        
+		<div class="ms-section" id="right1">
+        <div class="scrolldown1"><span>Scroll</span></div>
+        <div class="particle" id="pt2"></div>
+    	<!--/right1--></div>
+
+		<div class="ms-section" id="right2">
+		<!--/right2--></div>
+
+		<div class="ms-section" id="right3">
+		<!--/right3--></div>
+		
+		<div class="ms-section" id="right4">
+        <div class="particle" id="pt4"></div>
+		<!--/right4--></div>
+    
+    	<div class="ms-section" id="right5">
+        <div class="particle" id="pt6"></div>
+		<!--/right5--></div>
+				
+		<div class="ms-section" id="right6">
+		<!--/right6--></div>
+	<!--/ms-right--></div>
+<!--/wrapper--></div>
+<footer id="footer">
+<small>&copy; smart fashion</small>
+</footer>
+<!--/container--></div>
+	
+<!--=============JS ===============--> 
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+<!--機能編 4-1-5　ロゴアウトラインアニメーション-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+<!--印象編　5-5　雪が降る/5-6　桜が散る-->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!--印象編　6-3　スクロールすると画面分割した左右がそれぞれ動く-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/multiscroll.js/0.2.2/jquery.multiscroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<!--自作のJS-->    
+<script src="js/script.js"></script>
+</body>
+</html>

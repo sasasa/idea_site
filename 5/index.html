@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>1-5 ギャラリーサイト</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+<meta name="robots" content="noindex,nofollow"><meta name="keywords"  content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--=============Google Font ===============-->
+<link href="https://fonts.googleapis.com/css?family=Italianno%7CMarcellus&display=swap" rel="stylesheet">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<!--機能編 6-1-4 動きを組み合わせて全画面で見せる-->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+<!--機能編 6-2-2 カテゴリ別に画像を並び替える-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+<!--自作のCSS-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/parts.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+
+<body>
+<div id="splash">
+	<div id="splash_text"></div>
+</div> 
+    
+<header id="slider">
+<div class="heading-block">
+<h1 class="TextRandomAnime">Ryoko Kubota</h1>
+<p class="TextRandomAnime">Photographer</p>
+<!--/heading-block--></div>
+<ul id="sns-icon">
+<li><a href="#"><img src="svg/ico_insta.svg" alt="Instagram"></a></li>
+<li><a href="#"><img src="svg/ico_fb.svg" alt="Facebook"></a></li>
+<li><a href="#"><img src="svg/ico_tw.svg" alt="Twitter"></a></li>
+</ul>   
+<!--/slider--></header>
+
+<div class="openbtn"><span></span><span></span><span></span></div>
+<nav id="g-nav">
+<div id="g-nav-list">
+<ul>
+<li><a href="#">Top</a></li>	
+<li><a href="#">About</a></li>	
+<li><a href="#">Service</a></li>	
+<li><a href="#">Contact</a></li>	
+</ul>
+</div>
+</nav>
+    
+<div class="wrapper">
+
+      <ul id="sort" class="sort-btn">
+        <li class="sort00 active">All</li>
+        <li class="sort01">Landscape</li>
+        <li class="sort02">Women</li>
+        <li class="sort03">Flower</li>
+     </ul>
+	
+	<ul id="gallery" class="grid delayScroll">
+		<li class="item sort01">
+		<div class="item-content">
+		<a href="img/01.jpg" data-fancybox="group1" data-caption="Ocean 2019"><div class="img-box"><img src="img/01.jpg" alt=""></div><span>Ocean 2019</span></a>
+		</div>
+		</li>
+		<li class="item sort03">
+		<div class="item-content">
+		<a href="img/02.jpg" data-fancybox="group3" data-caption="Flower 2018"><div class="img-box"><img src="img/02.jpg" alt=""></div><span>Flower 2018</span></a>
+		</div>
+		</li>
+		<li class="item sort01">
+		<div class="item-content">
+		<a href="img/03.jpg" data-fancybox="group1" data-caption="Desk 2020"><div class="img-box"><img src="img/03.jpg" alt=""></div><span>Desk 2020</span></a>
+		</div>
+		</li>
+		<li class="item sort02">
+		<div class="item-content">
+		<a href="img/04.jpg" data-fancybox="group2" data-caption="Woman 2018"><div class="img-box"><img src="img/04.jpg" alt=""></div><span>Woman 2018</span></a>
+		</div>
+		</li>
+		<li class="item sort02">
+		<div class="item-content">
+		<a href="img/05.jpg" data-fancybox="group2" data-caption="Woman 2021"><div class="img-box"><img src="img/05.jpg" alt=""></div><span>Woman 2021</span></a>
+		</div>
+		</li>
+		<li class="item sort02">
+		<div class="item-content">
+		<a href="img/06.jpg" data-fancybox="group2" data-caption="Woman 2020"><div class="img-box"><img src="img/06.jpg" alt=""></div><span>Woman 2020</span></a>
+		</div>
+		</li>
+		<li class="item sort02">
+		<div class="item-content">
+		<a href="img/07.jpg" data-fancybox="group2" data-caption="Group 2010"><div class="img-box"><img src="img/07.jpg" alt=""></div><span>Group 2010</span></a>
+		</div>
+		</li>
+		<li class="item sort03">
+		<div class="item-content">
+		<a href="img/08.jpg" data-fancybox="group3" data-caption="Flower 2019"><div class="img-box"><img src="img/08.jpg" alt=""></div><span>Flower 2019</span></a>
+		</div>
+		</li>
+		<li class="item sort01">
+		<div class="item-content">
+		<a href="img/09.jpg" data-fancybox="group1" data-caption="Coffee 2019"><div class="img-box"><img src="img/09.jpg" alt=""></div><span>Coffee 2019</span></a>
+		</div>
+		</li>
+		<li class="item sort01">
+		<div class="item-content">
+		<a href="img/10.jpg" data-fancybox="group1" data-caption="Ocean 2019"><div class="img-box"><img src="img/10.jpg" alt=""></div><span>Ocean 2019</span></a>
+		</div>
+		</li>
+		<li class="item sort01">
+		<div class="item-content">
+		<a href="img/11.jpg" data-fancybox="group1" data-caption="Table 2025"><div class="img-box"><img src="img/11.jpg" alt=""></div><span>Table 2025</span></a>
+		</div>
+		</li>
+		<li class="item sort01">
+		<div class="item-content">
+		<a href="img/12.jpg" data-fancybox="group1" data-caption="Ocean 2025"><div class="img-box"><img src="img/12.jpg" alt=""></div><span>Ocean 2025</span></a>
+		</div>
+		</li>
+		<li class="item sort01">
+		<div class="item-content">
+		<a href="img/13.jpg" data-fancybox="group1" data-caption="Mountain 2000"><div class="img-box"><img src="img/13.jpg" alt=""></div><span>Mountain 2000</span></a>
+		</div>
+		</li>
+		<li class="item sort02">
+		<div class="item-content">
+		<a href="img/14.jpg" data-fancybox="group2" data-caption="Woman2024"><div class="img-box"><img src="img/14.jpg" alt=""></div><span>Woman2024</span></a>
+		</div>
+		</li>
+		<li class="item sort01">
+		<div class="item-content">
+		<a href="img/15.jpg" data-fancybox="group1" data-caption="Art 2021"><div class="img-box"><img src="img/15.jpg" alt=""></div><span>Art 2021</span></a>
+		</div>
+		</li>
+		<li class="item sort01">
+		<div class="item-content">
+		<a href="img/16.jpg" data-fancybox="group1" data-caption="Winter 2023"><div class="img-box"><img src="img/16.jpg" alt=""></div><span>Winter 2023</span></a>
+		</div>
+		</li>
+		<li class="item sort01">
+		<div class="item-content">
+		<a href="img/17.jpg" data-fancybox="group2" data-caption="Table 2023"><div class="img-box"><img src="img/17.jpg" alt=""></div><span>Table 2023</span></a>
+		</div>
+		</li>
+		<li class="item sort03">
+		<div class="item-content">
+		<a href="img/18.jpg" data-fancybox="group3" data-caption="Flower 2020"><div class="img-box"><img src="img/18.jpg" alt=""></div><span>Flower 2020</span></a>
+		</div>
+		</li>
+		<li class="item sort02">
+		<div class="item-content">
+		<a href="img/19.jpg" data-fancybox="group2" data-caption="Woman 2023"><div class="img-box"><img src="img/19.jpg" alt=""></div><span>Woman 2023</span></a>
+		</div>
+		</li>
+		<li class="item sort01">
+		<div class="item-content">
+		<a href="img/20.jpg" data-fancybox="group1" data-caption="Table 2000"><div class="img-box"><img src="img/20.jpg" alt=""></div><span>Table 2000</span></a>
+		</div>
+		</li>
+		<li class="item sort02">
+		<div class="item-content">
+		<a href="img/21.jpg" data-fancybox="group2" data-caption="Woman 2000"><div class="img-box"><img src="img/21.jpg" alt=""></div><span>Woman 2000</span></a>
+		</div>
+		</li>
+		<li class="item sort01">
+		<div class="item-content">
+		<a href="img/22.jpg" data-fancybox="group1" data-caption="Summer 2007"><div class="img-box"><img src="img/22.jpg" alt=""></div><span>Summer 2007</span></a>
+		</div>
+		</li>
+		<li class="item sort02">
+		<div class="item-content">
+		<a href="img/23.jpg" data-fancybox="group2" data-caption="Woman 2014"><div class="img-box"><img src="img/23.jpg" alt=""></div><span>Woman 2014</span></a>
+		</div>
+		</li>
+		<li class="item sort01">
+		<div class="item-content">
+		<a href="img/24.jpg" data-fancybox="group1" data-caption="Steps 2000"><div class="img-box"><img src="img/24.jpg" alt=""></div><span>Steps 2000</span></a>
+		</div>
+		</li>
+		<li class="item sort02">
+		<div class="item-content">
+		<a href="img/25.jpg" data-fancybox="group2" data-caption="Woman 2018"><div class="img-box"><img src="img/25.jpg" alt=""></div><span>Woman 2018</span></a>
+		</div>
+		</li>
+		<li class="item sort02">
+		<div class="item-content">
+		<a href="img/26.jpg" data-fancybox="group2" data-caption="Woman 2010"><div class="img-box"><img src="img/26.jpg" alt=""></div><span>Woman 2010</span></a>
+		</div>
+		</li>
+		<li class="item sort02">
+		<div class="item-content">
+		<a href="img/27.jpg" data-fancybox="group2" data-caption="Woman 2013"><div class="img-box"><img src="img/27.jpg" alt=""></div><span>Woman 2013</span></a>
+		</div>
+		</li>
+		<li class="item sort01">
+		<div class="item-content">
+		<a href="img/28.jpg" data-fancybox="group1" data-caption="Ocean 2010"><div class="img-box"><img src="img/28.jpg" alt=""></div><span>Ocean 2010</span></a>
+		</div>
+		</li>
+		<li class="item sort01">
+		<div class="item-content">
+		<a href="img/29.jpg" data-fancybox="group1" data-caption="Winter 2006"><div class="img-box"><img src="img/29.jpg" alt=""></div><span>Winter 2006</span></a>
+		</div>
+		</li>
+		<li class="item sort03">
+		<div class="item-content">
+		<a href="img/30.jpg" data-fancybox="group3" data-caption="Flower 2014"><div class="img-box"><img src="img/30.jpg" alt=""></div><span>Flower 2014</span></a>
+		</div>
+		</li>
+	</ul>
+
+<!--/wrapper--></div>
+    
+	<footer id="footer">
+	<p class="js-scroll scroll-top scroll-view"><a href="#gallery">Scroll</a></p>
+	<p class="js-pagetop scroll-top"><a href="#">Page Top</a></p>
+	<small>&copy; Ryoko Kubota All Rights Reserved.</small>
+	</footer>
+
+<!--=============JS ===============--> 
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!--機能編 4-1-1数字カウントアップ-->
+<script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+<!--IE11用　不必要なら削除-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+<!--機能編 6-1-4 動きを組み合わせて全画面で見せる-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>  
+<!--機能編 6-2-2 カテゴリ別に画像を並び替える-->
+<!--Muuri-->
+<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+<script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+<!--fancybox-->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<!--自作のJS-->    
+<script src="js/script.js"></script>
+</body>
+</html>

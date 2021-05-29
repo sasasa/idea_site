@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>1-4 科学的なサイト</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+<meta name="robots" content="noindex,nofollow"><meta name="keywords"  content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--=============Google Font ===============-->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP%7CRoboto&display=swap" rel="stylesheet">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<!--印象編　8-8 テキストがランダムに出現-->   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+<!--自作のCSS-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/parts.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+<body>
+
+<div id="splash">
+<div id="splash_text"></div>
+</div>
+
+<div id="particles-js"></div>
+<div id="wrapper">
+
+<header id="header" class="fadeDownTrigger">
+    <h1 class="smoothTrigger"><a href="#">Science Labo</a></h1>
+    <div class="header-area">
+    <ul>
+        <li><dl><dt>Tel</dt><dd><a href="tel:03-1234-5678">03-1234-5678</a></dd></dl></li>
+        <li><dl><dt>Fax</dt><dd>03-1234-5678</dd></dl></li>
+    </ul>
+    <a href="#" class="float3"><span>Contact</span></a>
+    <!--/header-area--></div>
+</header>
+    
+<div class="openbtn"><span></span><span></span><span></span></div>
+<nav id="g-nav">
+<div id="g-nav-list">
+<ul>
+<li><a href="#">Top</a></li>	
+<li><a href="#">About Us</a></li>
+<li><a href="#">Topics</a></li>	
+<li><a href="#">Satistics</a></li>
+<li><a href="#">Contact</a></li>	
+</ul>
+</div>
+</nav>
+    
+<div id="container">
+<main>
+<section class="fluid-area">
+<div class="fluid-block smoothTrigger"><div class="fluid"></div></div>
+<div class="fluid-lead">
+<h2><span class="randomAnime">Our Technology</span><br><span class="randomAnime">for making future</span></h2>
+<p class="smoothTrigger">サイエンスラボは科学の力を信じ、<br>社会を豊かにするため<br>研究を重ねています</p>
+<!--/fluid-lead--></div>   
+<!--/fluid-area--></section>
+    
+<section id="topics">
+    <div class="heading-block smoothTrigger"><h2 class="heading01">T<span class="en">opics</span><span class="jp">更新情報</span></h2></div>
+    <div class="topics-area">
+    <article class="smoothTrigger"><a href="#">
+        <figure class="zoomOut"><span class="mask"><img src="img/01.jpg" alt=""></span></figure>
+        <div class="topics-block">
+        <time datetime="2021-10-01">2021.10.01</time>
+        <h3>海外メディアで紹介されました。</h3>
+        </div>
+    </a></article>
+    <article class="smoothTrigger"><a href="#">
+        <figure class="zoomOut"><span class="mask"><img src="img/02.jpg" alt=""></span></figure>
+        <div class="topics-block">
+        <time datetime="2021-11-10">2021.11.10</time>
+        <h3>杉山研究員による最新技術の考察</h3>
+        </div>
+    </a></article>
+    <article class="smoothTrigger"><a href="#">
+        <figure class="zoomOut"><span class="mask"><img src="img/03.jpg" alt=""></span></figure>
+        <div class="topics-block">
+        <time datetime="2021-12-25">2021.12.25</time>
+        <h3>研究施設の見学会を実施しました</h3>
+        </div>
+   </a></article>
+    <article class="smoothTrigger"><a href="#">
+        <figure class="zoomOut"><span class="mask"><img src="img/04.jpg" alt=""></span></figure>
+        <div class="topics-block">
+        <time datetime="2021-12-29">2021.12.29</time>
+        <h3>才能ある研究者を募集いたします</h3>
+        </div>
+    </a></article>
+    <!--/topics-area--></div>
+    <div class="topics-btn smoothTrigger"><a href="#" class="btnlinestretches4"><span>一覧</span></a></div>
+</section>
+
+<section id="greeting">
+    <div class="greeting-area">
+        <figure class="greeting-img smoothTrigger"><img src="img/05.jpg" alt=""></figure>
+        <div class="greeting-content">
+        <h2 class="heading01 smoothTrigger">G<span class="en">reeting</span><span class="jp">代表ご挨拶</span></h2>
+        <p class="greeting-lead smoothTrigger">サイエンスラボは、未来志向の<br>これからの社会をつくるラボです</p>
+            <p class="smoothTrigger">私たちのまわりには、目に見えないところでテクノロジーが活用されており、日々進化しています。</p>
+            <p class="smoothTrigger">サイエンスラボは、みなさんの暮らしを豊かにする研究と、若手研究者の育成にも力を入れています。</p>
+        <p class="txt-r smoothTrigger">サイエンスラボ<br>代表　久保田 涼子</p>
+        <!--/greeting-content--></div>
+    <!--/greeting-area--></div>
+</section>
+    
+<section id="statistics">
+    <div class="heading-block smoothTrigger"><h2 class="heading01">S<span class="en">tatistics</span><span class="jp">統計データ</span></h2></div>
+
+<div id="count-up-area" class="smoothTrigger">
+    <div class="cont-up-block">
+    <p>年間の実験回数 約<span class="count-up count-size">395</span>回</p>
+    <p>サイエンスラボでは日々様々な実験が行われています、</p>
+    <!--/count-up-block--></div>
+<!--/count-up-area--></div>
+
+<div class="chart-area pie smoothTrigger">
+<canvas id="chart01"></canvas>
+</div>
+    
+<div class="chart-area bar smoothTrigger">
+<canvas id="chart02"></canvas>
+</div>
+    
+</section>    
+
+<section id="contact">
+    <h2 class="smoothTrigger">Contact<span>お問い合わせ</span></h2>
+    <p class="smoothTrigger">10:00-19:00（平日）</p>
+    <ul class="smoothTrigger">
+        <li><dl><dt>Tel</dt><dd><a href="tel:03-1234-5678">03-1234-5678</a></dd></dl></li>
+        <li><dl><dt>Fax</dt><dd>03-1234-5678</dd></dl></li>
+    </ul>
+    <a href="#" class="btn04 borderleft"><span>お問い合わせフォームへ</span></a>
+</section>
+</main>   
+
+<footer id="footer">
+    <div id="page-top"><a href="#header"></a></div>
+    <small>&copy; Science Labo</small>
+</footer>
+   
+<canvas id="waveCanvas"></canvas>
+<!--/container--></div>
+<!--/wrapper--></div>
+
+<!--=============JS ===============--> 
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!--機能編 4-1-2 プログレスバー＋数字カウントアップ-->
+<script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+<!--IE11用-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+<!--機能編 9-5-2 棒グラフ（縦）9-5-6 円グラフ-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<!--機能編 9-5-1 数字のカウントアップ・ダウン + 9-5-2 棒グラフ（縦）9-5-6 円グラフ-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<!--印象編　8-8 テキストがランダムに出現-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+<script src="js/jquery.lettering.js"></script>
+<!--印象編　5-4 幾何学模様-->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!--自作のJS-->
+<script src="js/script.js"></script>
+</body>
+</html>
