@@ -4,13 +4,13 @@
 body{
     background:#000;
     font-family: 'Noto Sans JP', sans-serif;
-	color: #eee;
-	font-size:1rem;
-	line-height:1.85;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%; 
-	word-wrap: break-word;
+    color: #eee;
+    font-size:1rem;
+    line-height:1.85;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    word-wrap: break-word;
 }
 
 *{box-sizing: border-box;}
@@ -37,46 +37,46 @@ img{
 .loader,
 .loader:before,
 .loader:after {
-  background: #ffffff;
-  animation: load1 1s infinite ease-in-out;
-  width: 0.5em;
-  height: 1em;
+    background: #ffffff;
+    animation: load1 1s infinite ease-in-out;
+    width: 0.5em;
+    height: 1em;
 }
 .loader {
-  color: #ffffff;
-  text-indent: -9999em;
-  margin: 88px auto;
-  position: relative;
-  font-size: 11px;
-  transform: translateZ(0);
-  animation-delay: -0.16s;
+    color: #ffffff;
+    text-indent: -9999em;
+    margin: 88px auto;
+    position: relative;
+    font-size: 11px;
+    transform: translateZ(0);
+    animation-delay: -0.16s;
 }
 .loader:before,
 .loader:after {
-  position: absolute;
-  top: 0;
-  content: '';
+    position: absolute;
+    top: 0;
+    content: '';
 }
 .loader:before {
-  left: -1.5em;
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
+    left: -1.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
 }
 .loader:after {
-  left: 1.5em;
+    left: 1.5em;
 }
 
 @keyframes load1 {
-  0%,
-  80%,
-  100% {
-    box-shadow: 0 0;
-    height: 1em;
-  }
-  40% {
-    box-shadow: 0 -2em;
-    height: 2em;
-  }
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0;
+        height: 1em;
+    }
+    40% {
+        box-shadow: 0 -2em;
+        height: 2em;
+    }
 }
 
 
@@ -120,17 +120,17 @@ h2{
 #header h1{
     text-transform: uppercase;
     font-size: 1.5rem;
-    padding: 0 0 0 2%; 
+    padding: 0 0 0 2%;
     line-height: 1;
     white-space: nowrap;
 }
 
 @media screen and (max-width:960px){
-  #header h1{
-    position: absolute;
-      top:22px;
-      left:20px;
-      padding: 0;
+    #header h1{
+        position: absolute;
+        top:22px;
+        left:20px;
+        padding: 0;
     }
 }
 
@@ -164,12 +164,12 @@ body.appear #vidual-area::after{
 }
 
 @keyframes vidualbgRLextendAnime{
-	0% {
-		width:0;
-	}
-	100% {
-		width:40%;
-	}
+    0% {
+        width:0;
+    }
+    100% {
+        width:40%;
+    }
 }
 
 
@@ -237,7 +237,7 @@ body.appear #vidual-area::after{
 #vidual-area ul li{
     margin:0 2px;
 }
-    
+
 }
 
 @media screen and (max-width:450px) {
@@ -256,18 +256,18 @@ body.appear #vidual-area::after{
 }
 
 @media screen and (max-width:768px) {
-#service{
-    padding: 30% 0 10% 30px;
-}
+    #service{
+        padding: 30% 0 10% 30px;
+    }
 }
 
 @media screen and (max-width:500px) {
     #service .service-lead{
         padding: 0 10% 0 0;
     }
-#service .service-lead br{
-    display: none;
-}
+    #service .service-lead br{
+        display: none;
+    }
 }
 
 #service .service-area{
@@ -283,7 +283,7 @@ body.appear #vidual-area::after{
 }
 
 #service .service-area.startwd::after{
-     content:'';
+    content:'';
     position: absolute;
     top:10%;
     right:0;
@@ -309,16 +309,16 @@ body.appear #vidual-area::after{
 }
 
 #service .service-area section{
-     width:30%;   
+    width:30%;
 }
 
 @media screen and (max-width:570px) {
-#service .service-area section{
-     width:100%;
-    margin: 0 0 100px 0;
-    padding: 0 10% 0 0;
-}
- 
+    #service .service-area section{
+        width:100%;
+        margin: 0 0 100px 0;
+        padding: 0 10% 0 0;
+    }
+
 }
 
 #service .service-area section h3{
@@ -372,7 +372,7 @@ body.appear #vidual-area::after{
 }
 
 .news-img::after{
-     content:'';
+    content:'';
     position: absolute;
     bottom:0;
     left:0;
@@ -409,7 +409,6 @@ body.appear #vidual-area::after{
     .tab-area{
         width:100%;
     }
-    
 }
 
 @media only screen and (max-width: 768px) {
@@ -454,12 +453,12 @@ body.appear #vidual-area::after{
 }
 
 #contact .contact-detail h2{
-     margin:0 0 5px 0;   
+    margin:0 0 5px 0;
     font-size: 1.5rem;
 }
 
 #contact .contact-tel{
-     width:35%;
+    width:35%;
 }
 
 #contact .contact-tel p{
@@ -467,13 +466,13 @@ body.appear #vidual-area::after{
 }
 
 #contact .contact-tel p a{
-     display: block;  
+    display: block;
     padding: 20px;
     transition: all .3s;
 }
 
 #contact .contact-tel p a:hover{
-     background:rgba(255,255,255,0.2);   
+    background:rgba(255,255,255,0.2);
 }
 
 #contact .contact-tel p:last-child{
@@ -489,7 +488,7 @@ body.appear #vidual-area::after{
 #contact .contact-tel{
     width:50%;
 }
-    
+
 #contact .contact-tel br{
     display: block;
 }
@@ -552,7 +551,7 @@ body.appear #vidual-area::after{
 }
 
 #footer .footer-link ul{
-     display: flex;
+    display: flex;
     flex-wrap: wrap;
     line-height: 2.5;
 }
@@ -572,7 +571,7 @@ body.appear #vidual-area::after{
     color: #aaa;
 }
 #footer .footer-link ul ul{
-     display: block;
+    display: block;
 }
 
 @media screen and (max-width:830px) {
@@ -594,7 +593,7 @@ body.appear #vidual-area::after{
     #footer .footer-info li:nth-of-type(2) dd{
         display: block;
     }
-    
+
     #footer .footer-link{
         width:auto;
     }
@@ -602,15 +601,15 @@ body.appear #vidual-area::after{
     #footer .footer-link ul {
     justify-content: center;
     }
-    
+
     #footer small {
         padding:10% 0;
         text-align:center;
-    } 
+    }
 }
 
 @media screen and (max-width:400px) {
     #footer .footer-link ul li{
         margin: 0 10px;
-}
+    }
 }

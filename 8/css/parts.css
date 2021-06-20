@@ -429,24 +429,23 @@ opacity: 1;
 	animation-name: smoothAnime;
 	animation-duration:1s;
 	animation-fill-mode:forwards;
-  　transform-origin: left;
+    transform-origin: left;
 	opacity:0;
 }
 
 @keyframes smoothAnime{
-  from {
-  transform: translate3d(0, 100%, 0) skewY(12deg);
-  opacity:0;
-  }
-
-  to {
-  transform: translate3d(0, 0, 0) skewY(0);
-  opacity:1;
-  }
+from {
+    transform: translate3d(0, 100%, 0) skewY(12deg);
+    opacity:0;
+}
+to {
+    transform: translate3d(0, 0, 0) skewY(0);
+    opacity:1;
+}
 }
 
 /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
- 
+
 .smoothTrigger{
     opacity: 0;
 }
@@ -481,20 +480,20 @@ body {
 }
 
 @keyframes bgchange{
-      0%   {background:#daca0b;}/*変化させたい色*/
-      20%  {background:#8bda0b;}/*変化させたい色*/
-      30%  {background:#18da0b;}/*変化させたい色*/
-      40%  {background:#0bdaaa;}/*変化させたい色*/
-      50%  {background:#0ba1da;}/*変化させたい色*/
-      60% {background:#0b38da;}/*変化させたい色*/
-      70% {background:#810bda;}/*変化させたい色*/
-      80% {background:#da0b9a;}/*変化させたい色*/
-      90% {background:#da0b4e;}/*変化させたい色*/
-      100% {background:#da6a0b;}/*変化させたい色*/
- }
+    0%   {background:#daca0b;}/*変化させたい色*/
+    20%  {background:#8bda0b;}/*変化させたい色*/
+    30%  {background:#18da0b;}/*変化させたい色*/
+    40%  {background:#0bdaaa;}/*変化させたい色*/
+    50%  {background:#0ba1da;}/*変化させたい色*/
+    60% {background:#0b38da;}/*変化させたい色*/
+    70% {background:#810bda;}/*変化させたい色*/
+    80% {background:#da0b9a;}/*変化させたい色*/
+    90% {background:#da0b4e;}/*変化させたい色*/
+    100% {background:#da6a0b;}/*変化させたい色*/
+}
 
 /*==================================================
-   印象編　5-14　波線（1つ）
+    印象編　5-14　波線（1つ）
 ===================================*/
 
 #waveCanvas{
@@ -522,10 +521,10 @@ body {
 @media screen and (max-width:768px) {
 #particle{
     width:170%;
-	height:170vh;
+    height:170vh;
     left:-35%;
     top:-35vh;
-    }    
+}
 }
 
 /*==================================================
@@ -554,15 +553,15 @@ body {
 
 /*アニメーション前の指定*/
 .service-img svg path {
-		fill-opacity: 0;/*最初は透過0で見えない状態*/
-		transition: fill-opacity .5s;/*カラーがつく際のアニメーション0.5秒で変化*/
-		fill: none;/*塗りがない状態*/
-		stroke: #000;/*線の色*/
-	}
+    fill-opacity: 0;/*最初は透過0で見えない状態*/
+    transition: fill-opacity .5s;/*カラーがつく際のアニメーション0.5秒で変化*/
+    fill: none;/*塗りがない状態*/
+    stroke: #000;/*線の色*/
+}
 
 /*アニメーション後に.doneというクラス名がで付与された時の指定*/
 .service-img svg.done path{
-	  fill: #000;/*塗りの色*/
-	  fill-opacity: 1;/*透過1で見える状態*/
-	  stroke: none;/*線の色なし*/
-	}
+    fill: #000;/*塗りの色*/
+    fill-opacity: 1;/*透過1で見える状態*/
+    stroke: none;/*線の色なし*/
+}

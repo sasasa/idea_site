@@ -12,7 +12,7 @@ stroke = new Vivus('mask', {//アニメーションをするIDの指定
     animTimingFunction:Vivus.EASE,//動きの加速減速設定
 },
 function(){
-         $("#mask").attr("class", "done");//描画が終わったらdoneというクラスを追加
+    $("#mask").attr("class", "done");//描画が終わったらdoneというクラスを追加
 }
 );
 
@@ -202,7 +202,7 @@ particlesJS("pt2", {
     }
   },
   "retina_detect": true
-});	
+});
 
 
 /*===========================================================*/
@@ -525,17 +525,15 @@ $('#wrapper').multiscroll({
 	anchors: ['area1', 'area2', 'area3','area4','area5','area6'],//セクションとリンクするページ内アンカーになる名前
 	menu: '#menu',//上部ナビゲーションのメニュー設定
 	navigation: true,//右のナビゲーション出現、非表示は false
-	//navigationTooltips:['Area1', 'Area2', 'Area3','Area4','Area5'],//右のナビゲーション現在地時に入るテキスト
+	// navigationTooltips:['Area1', 'Area2', 'Area3','Area4','Area5'],//右のナビゲーション現在地時に入るテキスト
 	//loopTop: true,//最初のセクションを上にスクロールして最後のセクションまでスクロールするかどうかを定義します。
 	loopBottom: true,//最後のセクションを下にスクロールして最初のセクションまでスクロールするかどうかを定義します。
     //※以下は今回のプラグインの組み合わせのみで使用。ページの途中でリロードしてもトップのタイピング出現
     afterLoad: function(anchorLink, index){
 		if(index == 1){
 			TextTypingAnime();
-		}	
+		}
 	}
-
-    
 });
 
 /*==================================================
@@ -550,33 +548,33 @@ $(window).scroll(function () {
 
 // ページが読み込まれたらすぐに動かしたい場合の記述
 $(window).on('load',function(){
-    
+
     //機能編 4-1-5 ロゴアウトラインアニメーション
     $("#splash_logo").delay(3000).fadeOut('slow');//ロゴを3秒（3000ms）待機してからフェードアウト
 
     stroke.play();//SVGアニメーションの実行
-  
-    //=====ここからローディングエリア（splashエリア）をフェードアウトした後に動かしたいJSをまとめる    
-    $("#splash").delay(3000).fadeOut(800,function(){//ローディング画面を3秒（3000ms）待機してからフェードアウト
-    
-    $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与 
-	
+
+    //=====ここからローディングエリア（splashエリア）をフェードアウトした後に動かしたいJSをまとめる
+    $("#splash").delay(3000).fadeOut(800, function() {//ローディング画面を3秒（3000ms）待機してからフェードアウト
+
+    $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
+
     //印象編 8-10テキストがタイピング風に出現
-	var element = $(".TextTyping");
-	element.each(function () {
-		var text = $(this).html();
-		var textbox = "";
-		text.split('').forEach(function (t) {
-			if (t !== " ") {
-				textbox += '<span>' + t + '</span>';
-			} else {
-				textbox += t;
-			}
+		var element = $(".TextTyping");
+		element.each(function () {
+			var text = $(this).html();
+			var textbox = "";
+			text.split('').forEach(function (t) {
+				if (t !== " ") {
+					textbox += '<span>' + t + '</span>';
+				} else {
+					textbox += t;
+				}
+			});
+			$(this).html(textbox);
 		});
-		$(this).html(textbox);
-	});
-	TextTypingAnime();/* アニメーション用の関数を呼ぶ*/
+		TextTypingAnime();/* アニメーション用の関数を呼ぶ*/
 
 }); //=====ここまでローディングエリア（splashエリア）を0.8秒でフェードアウトした後に動かしたいJSをまとめる
-    
+
 });// ここまでページが読み込まれたらすぐに動かしたい場合の記述

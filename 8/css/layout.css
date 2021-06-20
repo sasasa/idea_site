@@ -8,8 +8,8 @@ body{
 	line-height:1.85;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%; 
-	word-wrap: break-word;    
+	-webkit-text-size-adjust: 100%;
+	word-wrap: break-word;
 }
 
 _:-ms-lang(x)::-ms-backdrop, body{/*IE11用ハック*/
@@ -229,11 +229,11 @@ h2{
 @media screen and (max-width:540px) {
 #concept h3,
 #concept p{
-    text-align: left;  
+    text-align: left;
     line-height: 2;
-} 
+}
 #concept p br{
-    display: none;    
+    display: none;
 }
 
 }
@@ -262,7 +262,7 @@ _:-ms-lang(x)::-ms-backdrop, #service{/*IE11用ハック*/
 }
 
 #service .service-area .service-img{
-     width:20%;
+    width:20%;
     margin: 0 auto 1vh auto;
 }
 
@@ -274,7 +274,7 @@ _:-ms-lang(x)::-ms-backdrop, #service{/*IE11用ハック*/
 #service .caption{
     font-weight: bold;
     margin: 0 0 3vh 0;
-}   
+}
 
 @media screen and (max-width:768px) {
 #service{
@@ -293,7 +293,7 @@ _:-ms-lang(x)::-ms-backdrop, #service{/*IE11用ハック*/
 #service h2{
     padding:15vh 0 0 0;
 }
-    
+
 #service h3{
     font-size: 1.5rem;
 }
@@ -301,14 +301,14 @@ _:-ms-lang(x)::-ms-backdrop, #service{/*IE11用ハック*/
 
 @media screen and (max-width:500px) {
 
- #service .service-area{
+#service .service-area{
     display: block;
 }
 
 #service .service-area section{
     width: 100%;
-} 
-    
+}
+
 }
 /* about */
 
@@ -330,7 +330,7 @@ _:-ms-lang(x)::-ms-backdrop, #service{/*IE11用ハック*/
 }
 
 #about .about-list dl{
-     display: flex;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -349,9 +349,9 @@ _:-ms-lang(x)::-ms-backdrop, #service{/*IE11用ハック*/
 #about{
     padding: 5vh 0 0 0;
 }
-    
+
 #about h2{
-    padding:10vh 0 0 0;  
+    padding:10vh 0 0 0;
 }
 
 #about .about-list{
@@ -370,7 +370,7 @@ _:-ms-lang(x)::-ms-backdrop, #service{/*IE11用ハック*/
 
 #contact .tel,
 #contact .mail{
-    font-size: 2rem; 
+    font-size: 2rem;
     margin: 0 0 1vh 0;
 }
 
@@ -384,7 +384,7 @@ _:-ms-lang(x)::-ms-backdrop, #service{/*IE11用ハック*/
 }
 
 #contact .sns-link li img{
-     width:30px;   
+    width:30px;
 }
 
 @media screen and (max-width:768px) {
