@@ -15,6 +15,7 @@ function mediaQueriesWin(){
 	}else{//横幅が768px以上の場合
 		$(".has-child>a").off('click');//has-childクラスがついたaタグのonイベントをoff(無効)にし
 		$(".has-child>a").removeClass('active');//activeクラスを削除
+		$(".has-child").removeClass('active');//activeクラスを削除
 		$('.has-child').children('ul').css("display","");//スライドトグルで動作したdisplayも無効化にする
 	}
 }
@@ -30,7 +31,7 @@ $(window).on('load resize', function() {
 		Stickyfill.add(elements);
 	}else{
 		Stickyfill.remove(elements);
-	} 
+	}
 });
 
 /*===========================================================*/
@@ -81,7 +82,7 @@ $('#page-top').click(function () {
 //アコーディオンをクリックした時の動作
 $('.title').on('click', function() {//タイトル要素をクリックしたら
 	var findElm = $(this).next(".box");//直後のアコーディオンを行うエリアを取得し
-	$(findElm).slideToggle();//アコーディオンの上下動作 
+	$(findElm).slideToggle();//アコーディオンの上下動作
 	if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
 		$(this).removeClass('close');//クラス名を除去し
 	}else{//それ以外は
@@ -114,8 +115,8 @@ function GethashID (hashIDName){
 
 //タブをクリックしたら
 $('.tab a').on('click', function() {
-	var idName = $(this).attr('href'); //タブ内のリンク名を取得	
-	GethashID (idName);//設定したタブの読み込みと
+	var idName = $(this).attr('href'); //タブ内のリンク名を取得
+	GethashID(idName);//設定したタブの読み込みと
 	return false;//aタグを無効にする
 });
 
@@ -126,13 +127,6 @@ $(window).on('load', function () {
     $('.area:first-of-type').addClass("is-active"); //最初の.areaにis-activeクラスを追加
 	var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
 	GethashID (hashName);//設定したタブの読み込み
-});
-
-//タブをクリックしたら
-$('.tab a').on('click', function() {
-	var idName = $(this).attr('href'); //タブ内のリンク名を取得	
-	GethashID (idName);//設定したタブの読み込みと
-	return false;//aタグを無効にする
 });
 
 /*===========================================================*/
@@ -184,26 +178,27 @@ $('.choice-btn').slick({
 	focusOnSelect: true, //フォーカスの有効化
 	asNavFor: '.gallery', //連動させるスライドショーのクラス名
 });
-  
+
 //下の選択画像をスライドさせずに連動して変更させる設定。
 $('.gallery').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
 	var index = nextSlide; //次のスライド番号
 	//サムネイルのslick-currentを削除し次のスライド要素にslick-currentを追加
 	$(".choice-btn .slick-slide").removeClass("slick-current").eq(index).addClass("slick-current");
 });
-  
+
 /*==================================================
 /*機能編 9-6-1 ページを開くと、背景が暗くなりテキストを表示*/
 /*===================================*/
 //初回のみモーダルをすぐ出す判定。flagがモーダル表示のstart_open後に代入される
 	var access = $.cookie('access')
+	var flag = null;
 	if(!access){
 		flag = true;
-		$.cookie('access', false);
+		$.cookie('access', true);
 	}else{
-		flag = false	
+		flag = false
 	}
-	
+
 	//モーダル表示
 	$(".modal-open").modaal({
 	start_open:flag, // ページロード時に表示するか
@@ -230,17 +225,14 @@ function delayScrollAnime() {
 		var scroll = $(window).scrollTop();//スクロール値を取得
 		var windowHeight = $(window).height();//画面の高さを取得
 		var childs = $(this).children();	//子要素
-		
+
 		if (scroll >= elemPos - windowHeight && !$(parent).hasClass("play")) {//指定領域内にスクロールが入ったらまた親要素にクラスplayがなければ
 			$(childs).each(function () {
-				
 				if (!$(this).hasClass("flipRight")) {//アニメーションのクラス名が指定されているかどうかをチェック
-					
 					$(parent).addClass("play");	//親要素にクラス名playを追加
 					$(this).css("animation-delay", value + "s");//アニメーション遅延のCSS animation-delayを追加し
 					$(this).addClass("flipRight");//アニメーションのクラス名を追加
 					value = value + time;//delay時間を増加させる
-					
 					//全ての処理を終わったらplayを外す
 					var index = $(childs).index(this);
 					if((childs.length-1) == index){
@@ -261,29 +253,27 @@ function delayScrollAnime() {
 // 動きのきっかけの起点となるアニメーションの名前を定義
 function fadeAnime(){
 
-	//4-1 ふわっ（下から）
-    
+//4-1 ふわっ（下から）
 $('.fadeUpTrigger').each(function(){ //fadeUpTriggerというクラス名が
 		var elemPos = $(this).offset().top-50;//要素より、50px上の
 		var scroll = $(window).scrollTop();
 		var windowHeight = $(window).height();
 		if (scroll >= elemPos - windowHeight){
-		$(this).addClass('fadeUp');// 画面内に入ったらfadeUpというクラス名を追記
+			$(this).addClass('fadeUp');// 画面内に入ったらfadeUpというクラス名を追記
 		}else{
-		$(this).removeClass('fadeUp');// 画面外に出たらfadeUpというクラス名を外す
+			$(this).removeClass('fadeUp');// 画面外に出たらfadeUpというクラス名を外す
 		}
 		});
 
-	//4-1 ふわっ（上から）
-
+//4-1 ふわっ（上から）
 $('.fadeDownTrigger').each(function(){ //fadeDownTriggerというクラス名が
 		var elemPos = $(this).offset().top-50;//要素より、50px上の
 		var scroll = $(window).scrollTop();
 		var windowHeight = $(window).height();
 		if (scroll >= elemPos - windowHeight){
-		$(this).addClass('fadeDown');// 画面内に入ったらfadeDownというクラス名を追記
+			$(this).addClass('fadeDown');// 画面内に入ったらfadeDownというクラス名を追記
 		}else{
-		$(this).removeClass('fadeDown');// 画面外に出たらfadeDownというクラス名を外す
+			$(this).removeClass('fadeDown');// 画面外に出たらfadeDownというクラス名を外す
 		}
 		});
 }
@@ -300,7 +290,7 @@ $(window).resize(function() {
 // 画面をスクロールをしたら動かしたい場合の記述
 $(window).scroll(function () {
 	PageTopAnime();/*機能編  8-1-2 ページの指定の高さを超えたら下から出現の関数を呼ぶ*/
-    fadeAnime();/* 印象編 4 最低限おぼえておきたい動き*/
+  fadeAnime();/* 印象編 4 最低限おぼえておきたい動き*/
 	delayScrollAnime();/* 印象編 4-12 順番に現れる（CSS x jQuery）関数を呼ぶ*/
 });
 
@@ -308,7 +298,7 @@ $(window).scroll(function () {
 $(window).on('load', function () {
 	mediaQueriesWin();/*機能編  5-1-3 ドロップダウンメニュー（写真付 上ナビ）の関数を呼ぶ*/
 	PageTopAnime();/*機能編  8-1-2 ページの指定の高さを超えたら下から出現の関数を呼ぶ*/
-    fadeAnime();/* 印象編 4 最低限おぼえておきたい動き*/
+  fadeAnime();/* 印象編 4 最低限おぼえておきたい動き*/
 	delayScrollAnime();/* 印象編 4-12 順番に現れる（CSS x jQuery）関数を呼ぶ*/
 
     /*機能編 9-2-1 任意の場所をクリックすると隠れていた内容が開くの読み込み*/
@@ -319,9 +309,7 @@ $(window).on('load', function () {
 		$(Box).slideDown(500);					//アコーディオンを開く
 	});
 
-    
-    /*機能編 5-4-1 タブメニューの読み込み*/
-    var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
-	GethashID (hashName);//設定したタブの読み込み
-    
+  /*機能編 5-4-1 タブメニューの読み込み*/
+  var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
+	GethashID(hashName);//設定したタブの読み込み
 });

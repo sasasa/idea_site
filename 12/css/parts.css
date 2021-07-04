@@ -41,10 +41,10 @@
 
 /*アニメーション後に.doneというクラス名がで付与された時の指定*/
 #mask.done path{
-	  fill: #fff;/*塗りの色*/
-	  fill-opacity: 1;/*透過1で見える状態*/
-	  stroke: none;/*線の色なし*/
-	}
+		fill: #fff;/*塗りの色*/
+		fill-opacity: 1;/*透過1で見える状態*/
+		stroke: none;/*線の色なし*/
+}
 
 /*==================================================
 　機能編 4-2-1　背景色が伸びる（上から下）
@@ -58,17 +58,17 @@
 body.appear .splashbg{
     display: block;
     position:fixed;
-	z-index: 999;
+		z-index: 999;
     width: 100%;
     height: 100vh;
     top: 0;
-	left: 0;
+		left: 0;
     transform: scaleY(0);
     background-color:#504237;/*伸びる背景色の設定*/
-	animation-name:PageAnime;
-	animation-duration:1.2s;
-	animation-timing-function:ease-in-out;
-	animation-fill-mode:forwards;
+		animation-name:PageAnime;
+		animation-duration:1.2s;
+		animation-timing-function:ease-in-out;
+		animation-fill-mode:forwards;
 }
 
 @keyframes PageAnime{
@@ -210,15 +210,15 @@ body.appear #container{
 .btn{
     /*アニメーションの起点とするためrelativeを指定*/
     position: relative;
-	overflow: hidden;
+		overflow: hidden;
     /*ボタンの形状*/
-	text-decoration: none;
-	display: inline-block;
+		text-decoration: none;
+		display: inline-block;
    	border: 1px solid #fff;/* ボーダーの色と太さ */
     padding: 10px 30px;
     text-align: center;
     outline: none;
-    /*アニメーションの指定*/   
+    /*アニメーションの指定*/
     transition: ease .2s;
 }
 
@@ -231,20 +231,22 @@ body.appear #container{
 
 /*== 左から右 */
 .bgleft:before {
- 	content: '';
-    /*絶対配置で位置を指定*/
- 	position: absolute;
- 	top: 0;
- 	left: 0;
- 	z-index: 2;
-    /*色や形状*/
- 	background:#333;/*背景色*/
- 	width: 100%;
-	height: 100%;
-    /*アニメーション*/
- 	transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
- 	transform: scale(0, 1);
-	transform-origin: right top;
+		content: '';
+
+		/*絶対配置で位置を指定*/
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+			/*色や形状*/
+		background:#333;/*背景色*/
+		width: 100%;
+		height: 100%;
+
+		/*アニメーション*/
+		transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+		transform: scale(0, 1);
+		transform-origin: right top;
 }
 
 /*hoverした際の形状*/
@@ -262,10 +264,10 @@ body.appear #container{
 }
 
 .TextTyping::after {
- 	content: "|";
-	animation: typinganime .8s ease infinite;
-    font-weight: normal;
-    padding: 0 0 0 10px;
+		content: "|";
+		animation: typinganime .8s ease infinite;
+			font-weight: normal;
+			padding: 0 0 0 10px;
 }
 
 @keyframes typinganime{
@@ -278,7 +280,7 @@ body.appear #container{
 /*印象編　5-5　雪が降る、5-6　桜が散る*/
 /*===========================================================*/
 
-.particle{ 
+.particle{
 	position:absolute;/*描画固定*/
     left:0;
     top:0;
@@ -376,7 +378,7 @@ body.appear #container{
 /*＝＝＝＝＝＝＝＝＝＝＝550px以下の見え方＝＝＝＝＝＝＝＝＝＝＝＝＝*/
 
 @media screen and (max-width:550px){
-	
+
 #header{
 	justify-content: center;
 }
@@ -403,7 +405,7 @@ body.appear #container{
 }
 
 /*右エリア上部画像設定*/
-    
+
 #left1{
     background:url("../img/main-right.jpg") center;
     background-size:cover;
@@ -420,13 +422,13 @@ body.appear #container{
 	background-size:cover;
     height: 50vh;
 }
-    
+
 #left4 .sp-top{
 	background:url("../img/03.jpg") no-repeat top center;
 	background-size:cover;
     height: 50vh;
 }
-    
+
 #left4 .sp-bottom{
 	background:url("../img/04.jpg") no-repeat top center;
 	background-size:cover;
@@ -438,7 +440,7 @@ body.appear #container{
 	background-size:cover;
     height: 50vh;
 }
-    
+
 #left5 .sp-bottom{
 	background:url("../img/07.jpg") no-repeat center;
 	background-size:cover;
@@ -454,5 +456,5 @@ body.appear #container{
 .sp-bottom{
 	padding:20px;
 }
-	
+
 }

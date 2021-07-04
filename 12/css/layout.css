@@ -84,8 +84,8 @@ h2{
 }
 
 @media screen and (max-width:550px){
- h2{
-    font-size: 1.5rem;
+    h2{
+        font-size: 1.5rem;
     }
 }
 
@@ -106,7 +106,7 @@ h2{
 }
 
 #left6 .sp-bottom ul img{
-     height:25px;   
+    height:25px;
 }
 
 #footer{
@@ -116,10 +116,10 @@ h2{
 }
 
 @media screen and (max-width:550px){
- 
+
 #footer{
     bottom:inherit;
     left: 20px;
     top:20px;
-}   
+}
 }

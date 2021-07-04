@@ -17,7 +17,7 @@
 
 @media screen and (max-width:1020px){
 .sub-fix-block{
-	position:relative;/*stickyからrelativeに戻す*/	
+	position:relative;/*stickyからrelativeに戻す*/
     top:0;
 }
 }
@@ -27,7 +27,7 @@
 /*===================================*/
 
 #g-nav ul{
- /*2階層目の基点にするためrelativeを指定*/
+/*2階層目の基点にするためrelativeを指定*/
 	position: relative;
     display: flex;
     justify-content: center;
@@ -53,7 +53,7 @@
 
 
 #g-nav ul li a:hover{
-	color:#fff;	
+	color:#fff;
 }
 
 /*==矢印の設定*/
@@ -108,12 +108,12 @@
 /*== 2層目の設定 */
 
 #g-nav li.has-child ul{
-  /*絶対配置で位置を指定*/
+    /*絶対配置で位置を指定*/
     position: absolute;
 	left:5%;
 	top:58px;
 	z-index: 4;
-  /*子要素を横並びに*/    
+    /*子要素を横並びに*/
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
@@ -124,15 +124,15 @@
     /*はじめは非表示*/
 	visibility: hidden;
 	opacity: 0;
-     /*アニメーション設定*/
+    /*アニメーション設定*/
 	transition: all .3s;
     padding: 10px 0;
 }
 
 /*hoverしたら表示*/
 #g-nav li.has-child:hover > ul{
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
 /*各ナビゲーション横幅*/
@@ -166,7 +166,7 @@
 }
 
 #g-nav li.has-child ul{
-  	position: relative;
+	position: relative;
 	left:0;
 	top:0;
 	width:100%;
@@ -181,14 +181,14 @@
 }
 
 #g-nav ul li{
-	    border-bottom:1px solid rgba(255,255,255,0.8);
+    border-bottom:1px solid rgba(255,255,255,0.8);
 }
 
 #g-nav li.has-child ul li{
 		width:100%;
 		text-align: left;
 	}
-	
+
 #g-nav li.has-child ul li dl{
 		display: flex;
 		justify-content: space-between;
@@ -202,7 +202,7 @@
 	}
 
 #g-nav li.has-child ul li dd{
-		width:64%;	
+		width:64%;
         border-radius: 0;
         background:transparent;
         padding: 0;
@@ -213,28 +213,28 @@
 #g-nav ul li.has-child img{
         border-radius: 0;
 }
-    
+
 #g-nav ul li a{
-	    padding: 10px 20px 10px 40px;
+        padding: 10px 20px 10px 40px;
         color: #fff;
 }
 
 #g-nav ul li a:hover{
     color: #fff;
 }
-    
+
 #g-nav ul li li a{
 		padding: 0;
 }
-	
+
 /*矢印の位置と向き*/
-	
+
 #g-nav ul li.has-child > a::before{
 	top:17px;
 	left:20px;
     transform: rotate(135deg);
 }
-    
+
 #g-nav ul li.has-child.active > a::before{
     transform: rotate(-45deg);
 }
@@ -247,7 +247,7 @@
 #g-nav{
         display: none;
 }
-    
+
 /*アクティブになったエリア*/
 #g-nav.panelactive{
     display: block;
@@ -284,7 +284,7 @@
     opacity: 0;/*はじめは表示なし*/
     /*ナビの数が増えた場合縦スクロール*/
     position: fixed;
-    z-index: 99; 
+    z-index: 99;
     width: 100%;
     height: 100vh;
     overflow: auto;
@@ -292,7 +292,7 @@
 }
 
 #g-nav.panelactive #g-nav-list{
-     opacity: 1; /*クラスが付与されたら出現*/
+    opacity: 1; /*クラスが付与されたら出現*/
 }
 
 /*ナビゲーション*/
@@ -301,7 +301,7 @@
     width: 90%;
     margin:0 auto 60px auto;
 }
-    
+
 #g-nav ul ul{
     margin: 0;
 }
@@ -346,12 +346,12 @@
     height: 2px;
     border-radius: 5px;
 	background: #fff;
-  	width: 45%;
-  }
+	width: 45%;
+}
 
 
 .openbtn span:nth-of-type(1) {
-	top:13px;	
+	top:13px;
 }
 
 .openbtn span:nth-of-type(2) {
@@ -398,7 +398,7 @@
 	top:5px;
 	left:4px;
 }
-  
+
 }
 
 /*==================================================
@@ -429,23 +429,23 @@
     border-radius: 10px;
 	transform: translate(-50%, -50%) scale(1.1);
     /*アニメーションの指定*/
-    transition: .3s ease; 
-	}
+    transition: .3s ease;
+}
 
 .sub-btn-list li:first-child a{
-     background:#6ea924;   
+    background:#6ea924;
 }
 
 .sub-btn-list li:last-child a{
-     background:#457703;   
+    background:#457703;
 }
 
 .sub-btn-list li:first-child a.pushcircle:after {
- 	border: 1px solid #6ea924;   
+	border: 1px solid #6ea924;
 }
 
 .sub-btn-list li:last-child a.pushcircle:after {
- 	border: 1px solid #457703;   
+	border: 1px solid #457703;
 }
 
 /*hoverをしたら枠線が小さくなる*/
@@ -471,7 +471,7 @@
 	height: 60px;
 	color: #fff;
 	text-align: center;
-	text-transform: uppercase; 
+	text-transform: uppercase;
 	text-decoration: none;
 	font-size:0.6rem;
     letter-spacing: 0.1em;
@@ -499,14 +499,14 @@
 	animation: UpAnime 0.5s forwards;
 }
 @keyframes UpAnime{
-  from {
-    opacity: 0;
-	transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-	transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /*　下に下がる動き　*/
@@ -515,14 +515,14 @@
 	animation: DownAnime 0.5s forwards;
 }
 @keyframes DownAnime{
-  from {
-  	opacity: 1;
-	transform: translateY(0);
-  }
-  to {
-  	opacity: 1;
-	transform: translateY(100px);
-  }
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(100px);
+    }
 }
 
 /*==================================================
@@ -567,7 +567,7 @@
     background-color: #cbcaca;
     border-radius: 50%;
 }
-.title::after{   
+.title::after{
     top: 32%;
     right: 23px;
     width: 9px;
@@ -668,13 +668,13 @@
 }
 
 @media screen and (max-width:1020px){
- .slider img {
+.slider img {
     width:70vw;/*スライダー内の画像を55vwにしてレスポンシブ化*/
 }
 }
 
 @media screen and (max-width:768px){
- .slider img {
+.slider img {
     width:96vw;/*スライダー内の画像を55vwにしてレスポンシブ化*/
 }
 
@@ -689,7 +689,7 @@
 /*矢印の設定*/
 
 /*戻る、次へ矢印の位置*/
-.slick-prev, 
+.slick-prev,
 .slick-next {
     position: absolute;/*絶対配置にする*/
     top: 42%;
@@ -760,7 +760,7 @@
 /*矢印の設定*/
 
 /*戻る、次へ矢印の位置*/
-.slick-prev, 
+.slick-prev,
 .slick-next {
     position: absolute;/*絶対配置にする*/
 	z-index: 3;
@@ -825,9 +825,9 @@
 .modaal-close{
     background-color:#457703!important;
 }
-.modaal-close:after, 
+.modaal-close:after,
 .modaal-close:before{
-	background:#fff;	
+	background:#fff;
 }
 
 .modaal-close:focus:after,
@@ -843,15 +843,15 @@
 /*========= 検索窓のためのCSS ===============*/
 
 /*検索窓のエリア*/
- #search-wrap {
-     position: absolute;/*絶対配置にして*/
-	 z-index: 2;/*最前面に設定。数字は変更可*/
-	 top:10px;
-	 right:10px;
+#search-wrap {
+    position: absolute;/*絶対配置にして*/
+    z-index: 2;/*最前面に設定。数字は変更可*/
+    top:10px;
+    right:10px;
 }
 
 /*テキスト入力input設定*/
- #search-text{
+#search-text{
 	-webkit-appearance:none;/*SafariやChromeのデフォルトの設定を無効*/
 	width: 50px;/*テキスト入力エリアが伸びる前の横幅*/
 	height: 50px;
@@ -867,7 +867,7 @@
 }
 
 /*テキスト入力inputにフォーカスした時の形状*/
- #search-text:focus {
+#search-text:focus {
 	width: 220px;/*テキスト入力エリアが伸びる後の横幅*/
 	padding: 20px 0 20px 60px;
 }
@@ -885,15 +885,15 @@ opacity:0;
 }
 
 @keyframes fadeUpAnime{
-  from {
-    opacity: 0;
-	transform: translateY(100px);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
 
-  to {
-    opacity: 1;
-	transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* 4-1 ふわっ（上から）*/
@@ -906,15 +906,15 @@ opacity:0;
 }
 
 @keyframes fadeDownAnime{
-  from {
-    opacity: 0;
-	transform: translateY(-100px);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
 
-  to {
-    opacity: 1;
-	transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -925,27 +925,27 @@ opacity:0;
 
 /* 4-2 パタッ（右へ） */
 .flipRight{
-animation-name: flipRightAnime;
-animation-duration:0.5s;
-animation-fill-mode:forwards;
-perspective-origin: right center;
-opacity:0;
+    animation-name: flipRightAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    perspective-origin: right center;
+    opacity:0;
 }
 
 @keyframes flipRightAnime{
-  from {
-   transform: perspective(600px) translate3d(0, 0, 0) rotateY(-30deg);
- 	opacity: 0;
-  }
+    from {
+        transform: perspective(600px) translate3d(0, 0, 0) rotateY(-30deg);
+        opacity: 0;
+    }
 
-  to {
-  transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
-  opacity: 1;
-  }
+    to {
+        transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+        opacity: 1;
+    }
 }
 
 /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
- 
+
 .flipRightTrigger,
 .fadeUpTrigger,
 .fadeDownTrigger{
@@ -981,45 +981,45 @@ opacity:0;
 }
 
 .flipY a{/*テキストの基点となる位置を定義*/
-  position: relative;
-  display: block;
+    position: relative;
+    display: block;
 }
 
 .flipY img {
-  transition: all 0.35s;/*移り変わる速さを変更したい場合はこの数値を変更*/
-  backface-visibility: hidden;/*三次元になった際に裏面を可視化させない*/
+    transition: all 0.35s;/*移り変わる速さを変更したい場合はこの数値を変更*/
+    backface-visibility: hidden;/*三次元になった際に裏面を可視化させない*/
 }
 
 .flipY:hover img{/*hoverした時の変化*/
-  transform: rotateY(-180deg);
-  opacity: 0!important;
+    transform: rotateY(-180deg);
+    opacity: 0!important;
 }
 
 .flipY span.detail-cap {
-/*ここからエリアの絶対配置の指定*/
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-/*ここまでエリアの絶対配置の指定*/
-  transition: all 0.35s ease;/*移り変わる速さを変更したい場合はこの数値を変更*/
-  transform: rotateY(90deg);/*横軸に回転*/
-  transform-origin: 50% 0%;/*回転する基点*/
-  opacity: 0;
-  background:#666;/*背景色*/
-  color: #fff;/*テキストの色を変えたい場合はここを修正*/
- /*ここからテキスト中央寄せの指定*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
- /*ここまでテキスト中央寄せの指定*/
+    /*ここからエリアの絶対配置の指定*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*ここまでエリアの絶対配置の指定*/
+    transition: all 0.35s ease;/*移り変わる速さを変更したい場合はこの数値を変更*/
+    transform: rotateY(90deg);/*横軸に回転*/
+    transform-origin: 50% 0%;/*回転する基点*/
+    opacity: 0;
+    background:#666;/*背景色*/
+    color: #fff;/*テキストの色を変えたい場合はここを修正*/
+    /*ここからテキスト中央寄せの指定*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*ここまでテキスト中央寄せの指定*/
 }
 
 .flipY:hover span.detail-cap{/*hoverした時の変化*/
-  transform: rotateY(0);/*横軸に回転*/
-  opacity: 1;
-  transition-delay: 0.15s;/*移り変わる速さを変更したい場合はこの数値を変更*/
+    transform: rotateY(0);/*横軸に回転*/
+    opacity: 1;
+    transition-delay: 0.15s;/*移り変わる速さを変更したい場合はこの数値を変更*/
 }
 
 /*　7-8　キラッ　*/
